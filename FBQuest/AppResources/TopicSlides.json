@@ -1,0 +1,30 @@
+{
+	"topics": [
+		{
+			"topicId": 1,
+			"slides": [
+				{
+					"title": "Cool title",
+					"description": "Cool description",
+					"image":"slide1.png"
+				},
+				{
+					"title": "Cool title",
+					"description": "Cool description",
+					"image":"slide1.png"
+				}
+			]
+		},
+		{
+			"parentId": 2,
+			"slides": [
+				{
+					"title": "Cool title",
+					"description": "Cool description",
+					"image":"slide1.png"
+				}
+			]
+		}
+	]
+	
+}

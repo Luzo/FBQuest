@@ -1,0 +1,935 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		076447423F0BA140C0D34221 /* Pods_FBQuest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C648622CCA59DB5D625390E5 /* Pods_FBQuest.framework */; };
+		8DFC19F1C94F6108D5D41435 /* Pods_FBQuestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A13FEE55792AE5ECC909EC83 /* Pods_FBQuestTests.framework */; };
+		E807361E1EC8CD23008C5AE1 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E807361D1EC8CD23008C5AE1 /* BasePresenter.swift */; };
+		E80736201EC8D4F4008C5AE1 /* ViewControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E807361F1EC8D4F4008C5AE1 /* ViewControllerAssembly.swift */; };
+		E85104B91EC8BB0500BB95A6 /* AppScopeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85104B81EC8BB0500BB95A6 /* AppScopeController.swift */; };
+		E85104BD1EC8BB3900BB95A6 /* ScopeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85104BC1EC8BB3900BB95A6 /* ScopeController.swift */; };
+		E85104BF1EC8C78C00BB95A6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85104BE1EC8C78C00BB95A6 /* MenuViewController.swift */; };
+		E8A1CC471EC8B69A00ED26E9 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A1CC461EC8B69A00ED26E9 /* AppRouter.swift */; };
+		E8A1CC4A1EC8B6B800ED26E9 /* AppPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A1CC481EC8B6B800ED26E9 /* AppPresenter.swift */; };
+		E8A1CC4B1EC8B6B800ED26E9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A1CC491EC8B6B800ED26E9 /* BaseViewController.swift */; };
+		E8A1CC4E1EC8B6E200ED26E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8A1CC4C1EC8B6E200ED26E9 /* LaunchScreen.storyboard */; };
+		E8A1CC521EC8B6F900ED26E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8A1CC511EC8B6F900ED26E9 /* Assets.xcassets */; };
+		E8A1CC571EC8B7FA00ED26E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8A1CC561EC8B7FA00ED26E9 /* Main.storyboard */; };
+		E8A1CC5F1EC8B87800ED26E9 /* FBQuestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A1CC5E1EC8B87800ED26E9 /* FBQuestTests.swift */; };
+		E8A631301ED44CC600D42862 /* MenuItemTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A6312E1ED44CC600D42862 /* MenuItemTableCell.swift */; };
+		E8A631311ED44CC600D42862 /* MenuItemTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8A6312F1ED44CC600D42862 /* MenuItemTableCell.xib */; };
+		E8A631341ED4537F00D42862 /* MenuDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A631331ED4537F00D42862 /* MenuDatasource.swift */; };
+		E8A631361ED453E200D42862 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A631351ED453E200D42862 /* MenuPresenter.swift */; };
+		E8A631381ED453F600D42862 /* PresenterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A631371ED453F600D42862 /* PresenterAssembly.swift */; };
+		E8A6313A1ED476DD00D42862 /* InteractorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A631391ED476DD00D42862 /* InteractorAssembly.swift */; };
+		E8A6313C1ED47DE700D42862 /* MenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A6313B1ED47DE700D42862 /* MenuInteractor.swift */; };
+		E8A6313E1ED47EA700D42862 /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A6313D1ED47EA700D42862 /* BaseInteractor.swift */; };
+		E8A631401ED47FA700D42862 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A6313F1ED47FA700D42862 /* Resource.swift */; };
+		E8A631421ED4843700D42862 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A631411ED4843700D42862 /* Result.swift */; };
+		E8A631451ED489DC00D42862 /* MenuItemListResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A631441ED489DC00D42862 /* MenuItemListResource.swift */; };
+		E8A631471ED48A1900D42862 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A631461ED48A1900D42862 /* Topic.swift */; };
+		E8A631491ED48A2700D42862 /* TopicList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A631481ED48A2700D42862 /* TopicList.swift */; };
+		E8A6314F1ED49C0300D42862 /* TopicListConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A6314E1ED49C0300D42862 /* TopicListConverter.swift */; };
+		E8E7F9D81ED5FF0500F2D9AE /* Questions.json in Resources */ = {isa = PBXBuildFile; fileRef = E8E7F9D51ED5FF0500F2D9AE /* Questions.json */; };
+		E8E7F9D91ED5FF0500F2D9AE /* Topics.json in Resources */ = {isa = PBXBuildFile; fileRef = E8E7F9D61ED5FF0500F2D9AE /* Topics.json */; };
+		E8E7F9DA1ED5FF0500F2D9AE /* TopicSlides.json in Resources */ = {isa = PBXBuildFile; fileRef = E8E7F9D71ED5FF0500F2D9AE /* TopicSlides.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E8A1CC611EC8B87800ED26E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8A1CC0F1EC8B52A00ED26E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8A1CC161EC8B52A00ED26E9;
+			remoteInfo = FBQuest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		589006809B69F074CC8C8ABB /* Pods-FBQuest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBQuest.release.xcconfig"; path = "Pods/Target Support Files/Pods-FBQuest/Pods-FBQuest.release.xcconfig"; sourceTree = "<group>"; };
+		5C31577F2AD3D5B1C262765D /* Pods-FBQuest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBQuest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FBQuest/Pods-FBQuest.debug.xcconfig"; sourceTree = "<group>"; };
+		A13FEE55792AE5ECC909EC83 /* Pods_FBQuestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FBQuestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7B86727EFC48D480F0B48B4 /* Pods-FBQuestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBQuestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FBQuestTests/Pods-FBQuestTests.release.xcconfig"; sourceTree = "<group>"; };
+		C648622CCA59DB5D625390E5 /* Pods_FBQuest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FBQuest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E807361D1EC8CD23008C5AE1 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		E807361F1EC8D4F4008C5AE1 /* ViewControllerAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerAssembly.swift; sourceTree = "<group>"; };
+		E85104B81EC8BB0500BB95A6 /* AppScopeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppScopeController.swift; sourceTree = "<group>"; };
+		E85104BC1EC8BB3900BB95A6 /* ScopeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScopeController.swift; sourceTree = "<group>"; };
+		E85104BE1EC8C78C00BB95A6 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		E8A1CC171EC8B52A00ED26E9 /* FBQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8A1CC461EC8B69A00ED26E9 /* AppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		E8A1CC481EC8B6B800ED26E9 /* AppPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPresenter.swift; sourceTree = "<group>"; };
+		E8A1CC491EC8B6B800ED26E9 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E8A1CC4D1EC8B6E200ED26E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E8A1CC4F1EC8B6ED00ED26E9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8A1CC511EC8B6F900ED26E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E8A1CC561EC8B7FA00ED26E9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E8A1CC5C1EC8B87800ED26E9 /* FBQuestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FBQuestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8A1CC5E1EC8B87800ED26E9 /* FBQuestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBQuestTests.swift; sourceTree = "<group>"; };
+		E8A1CC601EC8B87800ED26E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8A6312E1ED44CC600D42862 /* MenuItemTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemTableCell.swift; sourceTree = "<group>"; };
+		E8A6312F1ED44CC600D42862 /* MenuItemTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuItemTableCell.xib; sourceTree = "<group>"; };
+		E8A631331ED4537F00D42862 /* MenuDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuDatasource.swift; sourceTree = "<group>"; };
+		E8A631351ED453E200D42862 /* MenuPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
+		E8A631371ED453F600D42862 /* PresenterAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterAssembly.swift; sourceTree = "<group>"; };
+		E8A631391ED476DD00D42862 /* InteractorAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorAssembly.swift; sourceTree = "<group>"; };
+		E8A6313B1ED47DE700D42862 /* MenuInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuInteractor.swift; sourceTree = "<group>"; };
+		E8A6313D1ED47EA700D42862 /* BaseInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseInteractor.swift; path = ../Feature/Menu/Interactor/BaseInteractor.swift; sourceTree = "<group>"; };
+		E8A6313F1ED47FA700D42862 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		E8A631411ED4843700D42862 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		E8A631441ED489DC00D42862 /* MenuItemListResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemListResource.swift; sourceTree = "<group>"; };
+		E8A631461ED48A1900D42862 /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
+		E8A631481ED48A2700D42862 /* TopicList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicList.swift; sourceTree = "<group>"; };
+		E8A6314E1ED49C0300D42862 /* TopicListConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicListConverter.swift; sourceTree = "<group>"; };
+		E8E7F9D51ED5FF0500F2D9AE /* Questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Questions.json; sourceTree = "<group>"; };
+		E8E7F9D61ED5FF0500F2D9AE /* Topics.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Topics.json; sourceTree = "<group>"; };
+		E8E7F9D71ED5FF0500F2D9AE /* TopicSlides.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TopicSlides.json; sourceTree = "<group>"; };
+		F7B78014AB570DD587667917 /* Pods-FBQuestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBQuestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FBQuestTests/Pods-FBQuestTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E8A1CC141EC8B52A00ED26E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				076447423F0BA140C0D34221 /* Pods_FBQuest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8A1CC591EC8B87800ED26E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DFC19F1C94F6108D5D41435 /* Pods_FBQuestTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C6B74C9D8DA9925174124315 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C648622CCA59DB5D625390E5 /* Pods_FBQuest.framework */,
+				A13FEE55792AE5ECC909EC83 /* Pods_FBQuestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB7456DC67B72A41B35432DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C31577F2AD3D5B1C262765D /* Pods-FBQuest.debug.xcconfig */,
+				589006809B69F074CC8C8ABB /* Pods-FBQuest.release.xcconfig */,
+				F7B78014AB570DD587667917 /* Pods-FBQuestTests.debug.xcconfig */,
+				B7B86727EFC48D480F0B48B4 /* Pods-FBQuestTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E8A1CC0E1EC8B52A00ED26E9 = {
+			isa = PBXGroup;
+			children = (
+				E8A1CC191EC8B52A00ED26E9 /* FBQuest */,
+				E8A1CC5D1EC8B87800ED26E9 /* FBQuestTests */,
+				C6B74C9D8DA9925174124315 /* Frameworks */,
+				CB7456DC67B72A41B35432DF /* Pods */,
+				E8A1CC181EC8B52A00ED26E9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E8A1CC181EC8B52A00ED26E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E8A1CC171EC8B52A00ED26E9 /* FBQuest.app */,
+				E8A1CC5C1EC8B87800ED26E9 /* FBQuestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E8A1CC191EC8B52A00ED26E9 /* FBQuest */ = {
+			isa = PBXGroup;
+			children = (
+				E8A6314A1ED48C1500D42862 /* AppResources */,
+				E8E7F9DE1ED6022E00F2D9AE /* Feature */,
+				E8E7F9DC1ED601C800F2D9AE /* Shared */,
+				E8A1CC481EC8B6B800ED26E9 /* AppPresenter.swift */,
+				E8A1CC511EC8B6F900ED26E9 /* Assets.xcassets */,
+				E8A1CC4F1EC8B6ED00ED26E9 /* Info.plist */,
+				E8A1CC4C1EC8B6E200ED26E9 /* LaunchScreen.storyboard */,
+			);
+			path = FBQuest;
+			sourceTree = "<group>";
+		};
+		E8A1CC3A1EC8B53600ED26E9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E8A1CC461EC8B69A00ED26E9 /* AppRouter.swift */,
+				E85104B81EC8BB0500BB95A6 /* AppScopeController.swift */,
+				E85104BC1EC8BB3900BB95A6 /* ScopeController.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E8A1CC3B1EC8B53C00ED26E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E8A1CC491EC8B6B800ED26E9 /* BaseViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E8A1CC3C1EC8B54300ED26E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E8A6312D1ED44C9100D42862 /* TableCell */,
+				E85104BE1EC8C78C00BB95A6 /* MenuViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E8A1CC3D1EC8B54700ED26E9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E8A631321ED4536200D42862 /* Datasource */,
+				E8A631351ED453E200D42862 /* MenuPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E8A1CC3E1EC8B55700ED26E9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E8A6313B1ED47DE700D42862 /* MenuInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E8A1CC3F1EC8B55E00ED26E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E8A631461ED48A1900D42862 /* Topic.swift */,
+				E8A631481ED48A2700D42862 /* TopicList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E8A1CC401EC8B57500ED26E9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E8A1CC411EC8B59B00ED26E9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		E8A1CC421EC8B5B000ED26E9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E8A1CC561EC8B7FA00ED26E9 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E8A1CC451EC8B5F000ED26E9 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				E8A631391ED476DD00D42862 /* InteractorAssembly.swift */,
+				E8A631371ED453F600D42862 /* PresenterAssembly.swift */,
+				E807361F1EC8D4F4008C5AE1 /* ViewControllerAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		E8A1CC5D1EC8B87800ED26E9 /* FBQuestTests */ = {
+			isa = PBXGroup;
+			children = (
+				E8A1CC5E1EC8B87800ED26E9 /* FBQuestTests.swift */,
+				E8A1CC601EC8B87800ED26E9 /* Info.plist */,
+			);
+			path = FBQuestTests;
+			sourceTree = "<group>";
+		};
+		E8A6312D1ED44C9100D42862 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				E8A6312E1ED44CC600D42862 /* MenuItemTableCell.swift */,
+				E8A6312F1ED44CC600D42862 /* MenuItemTableCell.xib */,
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
+		E8A631321ED4536200D42862 /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				E8A631331ED4537F00D42862 /* MenuDatasource.swift */,
+			);
+			path = Datasource;
+			sourceTree = "<group>";
+		};
+		E8A631431ED489C500D42862 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E8A6313F1ED47FA700D42862 /* Resource.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		E8A6314A1ED48C1500D42862 /* AppResources */ = {
+			isa = PBXGroup;
+			children = (
+				E8E7F9D51ED5FF0500F2D9AE /* Questions.json */,
+				E8E7F9D71ED5FF0500F2D9AE /* TopicSlides.json */,
+				E8E7F9D61ED5FF0500F2D9AE /* Topics.json */,
+			);
+			path = AppResources;
+			sourceTree = "<group>";
+		};
+		E8A6314D1ED49BEB00D42862 /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+				E8A6314E1ED49C0300D42862 /* TopicListConverter.swift */,
+			);
+			path = Converter;
+			sourceTree = "<group>";
+		};
+		E8E7F9DB1ED6019300F2D9AE /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				E8A6314D1ED49BEB00D42862 /* Converter */,
+				E8A1CC3E1EC8B55700ED26E9 /* Interactor */,
+				E8A1CC3F1EC8B55E00ED26E9 /* Model */,
+				E8A1CC3D1EC8B54700ED26E9 /* Presenter */,
+				E8E7F9DD1ED601DB00F2D9AE /* Resource */,
+				E8A1CC3C1EC8B54300ED26E9 /* View */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		E8E7F9DC1ED601C800F2D9AE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E8E7F9F11ED603F200F2D9AE /* Interactor */,
+				E8A1CC451EC8B5F000ED26E9 /* Assembly */,
+				E8A1CC411EC8B59B00ED26E9 /* Helper */,
+				E8E7F9EF1ED603BF00F2D9AE /* Model */,
+				E8E7F9F01ED603CD00F2D9AE /* Presenter */,
+				E8A631431ED489C500D42862 /* Resource */,
+				E8A1CC3A1EC8B53600ED26E9 /* Router */,
+				E8A1CC401EC8B57500ED26E9 /* Service */,
+				E8A1CC421EC8B5B000ED26E9 /* Storyboard */,
+				E8A1CC3B1EC8B53C00ED26E9 /* View */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		E8E7F9DD1ED601DB00F2D9AE /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E8A631441ED489DC00D42862 /* MenuItemListResource.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		E8E7F9DE1ED6022E00F2D9AE /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				E8E7F9DB1ED6019300F2D9AE /* Menu */,
+				E8E7F9E01ED6024E00F2D9AE /* Questions */,
+				E8E7F9DF1ED6023D00F2D9AE /* Slides */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		E8E7F9DF1ED6023D00F2D9AE /* Slides */ = {
+			isa = PBXGroup;
+			children = (
+				E8E7F9E81ED6031B00F2D9AE /* Converter */,
+				E8E7F9E91ED6032100F2D9AE /* Interactor */,
+				E8E7F9EA1ED6032500F2D9AE /* Model */,
+				E8E7F9EC1ED6033900F2D9AE /* Presenter */,
+				E8E7F9ED1ED6033F00F2D9AE /* Resource */,
+				E8E7F9EE1ED6034400F2D9AE /* View */,
+			);
+			path = Slides;
+			sourceTree = "<group>";
+		};
+		E8E7F9E01ED6024E00F2D9AE /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				E8E7F9E11ED602B500F2D9AE /* Converter */,
+				E8E7F9E21ED602BC00F2D9AE /* Interactor */,
+				E8E7F9E31ED602C200F2D9AE /* Model */,
+				E8E7F9E41ED602C600F2D9AE /* Presenter */,
+				E8E7F9E51ED602CA00F2D9AE /* Resource */,
+				E8E7F9E61ED602CF00F2D9AE /* View */,
+			);
+			path = Questions;
+			sourceTree = "<group>";
+		};
+		E8E7F9E11ED602B500F2D9AE /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Converter;
+			sourceTree = "<group>";
+		};
+		E8E7F9E21ED602BC00F2D9AE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E8E7F9E31ED602C200F2D9AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E8E7F9E41ED602C600F2D9AE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E8E7F9E51ED602CA00F2D9AE /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		E8E7F9E61ED602CF00F2D9AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E8E7F9E81ED6031B00F2D9AE /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Converter;
+			sourceTree = "<group>";
+		};
+		E8E7F9E91ED6032100F2D9AE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E8E7F9EA1ED6032500F2D9AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E8E7F9EC1ED6033900F2D9AE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E8E7F9ED1ED6033F00F2D9AE /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		E8E7F9EE1ED6034400F2D9AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E8E7F9EF1ED603BF00F2D9AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E8A631411ED4843700D42862 /* Result.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E8E7F9F01ED603CD00F2D9AE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E807361D1EC8CD23008C5AE1 /* BasePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E8E7F9F11ED603F200F2D9AE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E8A6313D1ED47EA700D42862 /* BaseInteractor.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E8A1CC161EC8B52A00ED26E9 /* FBQuest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8A1CC341EC8B52A00ED26E9 /* Build configuration list for PBXNativeTarget "FBQuest" */;
+			buildPhases = (
+				57CFD3B10C1018BEB719BE3A /* [CP] Check Pods Manifest.lock */,
+				E8A1CC131EC8B52A00ED26E9 /* Sources */,
+				E8A1CC141EC8B52A00ED26E9 /* Frameworks */,
+				E8A1CC151EC8B52A00ED26E9 /* Resources */,
+				BA43A40834A15521E97B487E /* [CP] Embed Pods Frameworks */,
+				E3C4A14A153535BC104C4483 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FBQuest;
+			productName = SocialMarketingTweeks;
+			productReference = E8A1CC171EC8B52A00ED26E9 /* FBQuest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E8A1CC5B1EC8B87800ED26E9 /* FBQuestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8A1CC631EC8B87800ED26E9 /* Build configuration list for PBXNativeTarget "FBQuestTests" */;
+			buildPhases = (
+				19A74D4768F00DEAE367C095 /* [CP] Check Pods Manifest.lock */,
+				E8A1CC581EC8B87800ED26E9 /* Sources */,
+				E8A1CC591EC8B87800ED26E9 /* Frameworks */,
+				E8A1CC5A1EC8B87800ED26E9 /* Resources */,
+				8B81E943BEB13CF7582A5CE2 /* [CP] Embed Pods Frameworks */,
+				999F7F15EC852AE2A6074C7D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E8A1CC621EC8B87800ED26E9 /* PBXTargetDependency */,
+			);
+			name = FBQuestTests;
+			productName = FBQuestTests;
+			productReference = E8A1CC5C1EC8B87800ED26E9 /* FBQuestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E8A1CC0F1EC8B52A00ED26E9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = LubosLehota;
+				TargetAttributes = {
+					E8A1CC161EC8B52A00ED26E9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 5LPLCZ2ALZ;
+						ProvisioningStyle = Automatic;
+					};
+					E8A1CC5B1EC8B87800ED26E9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 5LPLCZ2ALZ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E8A1CC161EC8B52A00ED26E9;
+					};
+				};
+			};
+			buildConfigurationList = E8A1CC121EC8B52A00ED26E9 /* Build configuration list for PBXProject "FBQuest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E8A1CC0E1EC8B52A00ED26E9;
+			productRefGroup = E8A1CC181EC8B52A00ED26E9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E8A1CC161EC8B52A00ED26E9 /* FBQuest */,
+				E8A1CC5B1EC8B87800ED26E9 /* FBQuestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E8A1CC151EC8B52A00ED26E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8E7F9D81ED5FF0500F2D9AE /* Questions.json in Resources */,
+				E8E7F9D91ED5FF0500F2D9AE /* Topics.json in Resources */,
+				E8A1CC4E1EC8B6E200ED26E9 /* LaunchScreen.storyboard in Resources */,
+				E8A1CC521EC8B6F900ED26E9 /* Assets.xcassets in Resources */,
+				E8E7F9DA1ED5FF0500F2D9AE /* TopicSlides.json in Resources */,
+				E8A631311ED44CC600D42862 /* MenuItemTableCell.xib in Resources */,
+				E8A1CC571EC8B7FA00ED26E9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8A1CC5A1EC8B87800ED26E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19A74D4768F00DEAE367C095 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		57CFD3B10C1018BEB719BE3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8B81E943BEB13CF7582A5CE2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FBQuestTests/Pods-FBQuestTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		999F7F15EC852AE2A6074C7D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FBQuestTests/Pods-FBQuestTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA43A40834A15521E97B487E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FBQuest/Pods-FBQuest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3C4A14A153535BC104C4483 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FBQuest/Pods-FBQuest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E8A1CC131EC8B52A00ED26E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8A631301ED44CC600D42862 /* MenuItemTableCell.swift in Sources */,
+				E8A631491ED48A2700D42862 /* TopicList.swift in Sources */,
+				E8A631401ED47FA700D42862 /* Resource.swift in Sources */,
+				E8A1CC4B1EC8B6B800ED26E9 /* BaseViewController.swift in Sources */,
+				E8A631451ED489DC00D42862 /* MenuItemListResource.swift in Sources */,
+				E807361E1EC8CD23008C5AE1 /* BasePresenter.swift in Sources */,
+				E8A631361ED453E200D42862 /* MenuPresenter.swift in Sources */,
+				E8A1CC4A1EC8B6B800ED26E9 /* AppPresenter.swift in Sources */,
+				E85104BF1EC8C78C00BB95A6 /* MenuViewController.swift in Sources */,
+				E8A631381ED453F600D42862 /* PresenterAssembly.swift in Sources */,
+				E8A6313C1ED47DE700D42862 /* MenuInteractor.swift in Sources */,
+				E8A6313A1ED476DD00D42862 /* InteractorAssembly.swift in Sources */,
+				E8A6314F1ED49C0300D42862 /* TopicListConverter.swift in Sources */,
+				E85104B91EC8BB0500BB95A6 /* AppScopeController.swift in Sources */,
+				E85104BD1EC8BB3900BB95A6 /* ScopeController.swift in Sources */,
+				E8A6313E1ED47EA700D42862 /* BaseInteractor.swift in Sources */,
+				E8A631341ED4537F00D42862 /* MenuDatasource.swift in Sources */,
+				E8A631421ED4843700D42862 /* Result.swift in Sources */,
+				E80736201EC8D4F4008C5AE1 /* ViewControllerAssembly.swift in Sources */,
+				E8A1CC471EC8B69A00ED26E9 /* AppRouter.swift in Sources */,
+				E8A631471ED48A1900D42862 /* Topic.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8A1CC581EC8B87800ED26E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8A1CC5F1EC8B87800ED26E9 /* FBQuestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E8A1CC621EC8B87800ED26E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8A1CC161EC8B52A00ED26E9 /* FBQuest */;
+			targetProxy = E8A1CC611EC8B87800ED26E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E8A1CC4C1EC8B6E200ED26E9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E8A1CC4D1EC8B6E200ED26E9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E8A1CC321EC8B52A00ED26E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E8A1CC331EC8B52A00ED26E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E8A1CC351EC8B52A00ED26E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C31577F2AD3D5B1C262765D /* Pods-FBQuest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5LPLCZ2ALZ;
+				INFOPLIST_FILE = FBQuest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lubos.lehota.FBQuest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E8A1CC361EC8B52A00ED26E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 589006809B69F074CC8C8ABB /* Pods-FBQuest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5LPLCZ2ALZ;
+				INFOPLIST_FILE = FBQuest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lubos.lehota.FBQuest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E8A1CC641EC8B87800ED26E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7B78014AB570DD587667917 /* Pods-FBQuestTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5LPLCZ2ALZ;
+				INFOPLIST_FILE = FBQuestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lubos.lehota.FBQuestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FBQuest.app/FBQuest";
+			};
+			name = Debug;
+		};
+		E8A1CC651EC8B87800ED26E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7B86727EFC48D480F0B48B4 /* Pods-FBQuestTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5LPLCZ2ALZ;
+				INFOPLIST_FILE = FBQuestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lubos.lehota.FBQuestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FBQuest.app/FBQuest";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E8A1CC121EC8B52A00ED26E9 /* Build configuration list for PBXProject "FBQuest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8A1CC321EC8B52A00ED26E9 /* Debug */,
+				E8A1CC331EC8B52A00ED26E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8A1CC341EC8B52A00ED26E9 /* Build configuration list for PBXNativeTarget "FBQuest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8A1CC351EC8B52A00ED26E9 /* Debug */,
+				E8A1CC361EC8B52A00ED26E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8A1CC631EC8B87800ED26E9 /* Build configuration list for PBXNativeTarget "FBQuestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8A1CC641EC8B87800ED26E9 /* Debug */,
+				E8A1CC651EC8B87800ED26E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E8A1CC0F1EC8B52A00ED26E9 /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Pods_FBQuestTests {
+  umbrella header "Pods-FBQuestTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

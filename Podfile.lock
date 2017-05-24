@@ -1,0 +1,15 @@
+PODS:
+  - ObjectMapper (2.2.6)
+  - Swinject (2.1.0)
+
+DEPENDENCIES:
+  - ObjectMapper (~> 2.2)
+  - Swinject (~> 2.1.0)
+
+SPEC CHECKSUMS:
+  ObjectMapper: 042708195cc46c20871cbcbec0453826398273fd
+  Swinject: 85e468ac75c5c2d234076f98c591d57d56bc64bc
+
+PODFILE CHECKSUM: 74d2d47c17f8f0b8152de092f7ef09e09eec105f
+
+COCOAPODS: 1.2.0
