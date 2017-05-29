@@ -19,7 +19,8 @@ class AppPresenter: UIResponder {
         window?.makeKeyAndVisible()
 
         let menuVC = self.appRouter.appScope.resolve(type: MenuViewController.self)
-        window?.rootViewController = menuVC
+        let navigationVC = UINavigationController(rootViewController: menuVC)
+        window?.rootViewController = navigationVC
     }
 }
 

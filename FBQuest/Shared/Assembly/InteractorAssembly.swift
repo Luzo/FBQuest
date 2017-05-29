@@ -11,6 +11,21 @@ import Swinject
 class InteractorAssembly: Assembly {
 
     func assemble(container: Container) {
+        assembleConverters(container: container)
+        assembleInteractors(container: container)
+    }
+
+    func assembleConverters(container: Container) {
+        container.register(TopicListConverter.self) { _ in
+            TopicListConverter()
+        }.inObjectScope(.container)
+
+        container.register(SlidesConverter.self) { _ in
+            SlidesConverter()
+        }.inObjectScope(.container)
+    }
+
+    func assembleInteractors(container: Container) {
         container.register(MenuInteractor.self) { r in
             MenuInteractor(
                 topicListResource: TopicListResource(),
@@ -18,8 +33,11 @@ class InteractorAssembly: Assembly {
             )
         }.inObjectScope(.container)
 
-        container.register(TopicListConverter.self) { _ in
-            TopicListConverter()
+        container.register(SlidesInteractor.self) { r in
+            SlidesInteractorImpl(
+                topicSlidesListResource: TopicSlidesListResource(),
+                slidesConverter: r.resolve(SlidesConverter.self)!
+            )
         }.inObjectScope(.container)
     }
 }

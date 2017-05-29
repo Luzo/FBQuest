@@ -11,9 +11,3 @@ class TopicListConverter: Converter {
         return input.items ?? []
     }
 }
-
-protocol Converter {
-    associatedtype Input
-    associatedtype Output
-    func convert(input: Input) -> Output
-}

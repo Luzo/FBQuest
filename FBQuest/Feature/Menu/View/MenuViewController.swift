@@ -33,7 +33,7 @@ final class MenuViewController: BaseViewController<MenuPresenter> {
 
     //MARK: TABLEVIEW DELEGATE - cannot be implemented in generic class extension
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.topicSelected(atIndex: indexPath.row)
+        presenter?.topicSelected(atIndex: indexPath.row)
         tableView.deselectRow(at: indexPath, animated: false)
     }
 }

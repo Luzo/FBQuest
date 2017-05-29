@@ -15,13 +15,13 @@ protocol MenuPresenter: Presenter {
 }
 
 final class MenuPresenterImpl: BasePresenter<MenuView> {
-    fileprivate let interactor: MenuInteractor
+    fileprivate var interactor: MenuInteractor?
     fileprivate var topics: [Topic] {
-        return interactor.topics
+        return interactor?.topics ?? []
     }
 
     override func setupAfterInit() {
-        view.setWithTitles(titles: topics.map { $0.name ?? "" })
+        view?.setWithTitles(titles: topics.map { $0.name ?? "" })
     }
 
     init(interactor: MenuInteractor, appRouter: AppRouter, view: MenuView) {
@@ -32,6 +32,13 @@ final class MenuPresenterImpl: BasePresenter<MenuView> {
 
 extension MenuPresenterImpl: MenuPresenter {
     func topicSelected(atIndex index: Int) {
-        print(topics[index])
+        guard let topicId = topics[index].groupID else {
+            assertionFailure("Missing topicID")
+            return
+        }
+
+        let slidesViewControler = appRouter.appScope.resolve(type: SlidesViewController.self)
+        slidesViewControler.presenter?.selectedTopicId = topicId
+        view?.navigationViewController?.pushViewController(slidesViewControler, animated: true)
     }
 }

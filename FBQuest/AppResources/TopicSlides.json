@@ -1,5 +1,5 @@
 {
-	"topics": [
+	"topicSlides": [
 		{
 			"topicId": 1,
 			"slides": [
@@ -9,14 +9,14 @@
 					"image":"slide1.png"
 				},
 				{
-					"title": "Cool title",
+					"title": "Cool title2",
 					"description": "Cool description",
 					"image":"slide1.png"
 				}
 			]
 		},
 		{
-			"parentId": 2,
+			"topicId": 2,
 			"slides": [
 				{
 					"title": "Cool title",

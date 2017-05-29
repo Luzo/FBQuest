@@ -6,7 +6,7 @@ import UIKit
 
 class BaseViewController<PresenterType>: UIViewController {
 
-    var presenter: PresenterType {
+    var presenter: PresenterType? {
         get {
             guard let castedPresenter = _presenter as? PresenterType else {
                 fatalError("BaseViewController's associated type must be of type \(Presenter.self))")

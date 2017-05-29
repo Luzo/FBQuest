@@ -14,6 +14,15 @@
 		E85104B91EC8BB0500BB95A6 /* AppScopeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85104B81EC8BB0500BB95A6 /* AppScopeController.swift */; };
 		E85104BD1EC8BB3900BB95A6 /* ScopeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85104BC1EC8BB3900BB95A6 /* ScopeController.swift */; };
 		E85104BF1EC8C78C00BB95A6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85104BE1EC8C78C00BB95A6 /* MenuViewController.swift */; };
+		E88BA65F1EDABC4C009629A9 /* TopicSlidesListResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88BA65E1EDABC4C009629A9 /* TopicSlidesListResource.swift */; };
+		E88BA6611EDABC7B009629A9 /* TopicSlidesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88BA6601EDABC7B009629A9 /* TopicSlidesList.swift */; };
+		E88BA6631EDABC89009629A9 /* TopicSlides.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88BA6621EDABC89009629A9 /* TopicSlides.swift */; };
+		E88BA6651EDABDE5009629A9 /* TopicSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88BA6641EDABDE5009629A9 /* TopicSlide.swift */; };
+		E88BA6671EDABEEE009629A9 /* SlidesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88BA6661EDABEEE009629A9 /* SlidesInteractor.swift */; };
+		E88BA6691EDABF26009629A9 /* SlidesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88BA6681EDABF26009629A9 /* SlidesPresenter.swift */; };
+		E88BA66B1EDABF33009629A9 /* SlidesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88BA66A1EDABF33009629A9 /* SlidesViewController.swift */; };
+		E88BA66D1EDB49F8009629A9 /* SlidesConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88BA66C1EDB49F8009629A9 /* SlidesConverter.swift */; };
+		E88BA6701EDB4A49009629A9 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88BA66F1EDB4A49009629A9 /* Converter.swift */; };
 		E8A1CC471EC8B69A00ED26E9 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A1CC461EC8B69A00ED26E9 /* AppRouter.swift */; };
 		E8A1CC4A1EC8B6B800ED26E9 /* AppPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A1CC481EC8B6B800ED26E9 /* AppPresenter.swift */; };
 		E8A1CC4B1EC8B6B800ED26E9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A1CC491EC8B6B800ED26E9 /* BaseViewController.swift */; };
@@ -61,6 +70,15 @@
 		E85104B81EC8BB0500BB95A6 /* AppScopeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppScopeController.swift; sourceTree = "<group>"; };
 		E85104BC1EC8BB3900BB95A6 /* ScopeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScopeController.swift; sourceTree = "<group>"; };
 		E85104BE1EC8C78C00BB95A6 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		E88BA65E1EDABC4C009629A9 /* TopicSlidesListResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopicSlidesListResource.swift; path = FBQuest/Feature/Slides/TopicSlidesListResource.swift; sourceTree = SOURCE_ROOT; };
+		E88BA6601EDABC7B009629A9 /* TopicSlidesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopicSlidesList.swift; path = FBQuest/Feature/Slides/TopicSlidesList.swift; sourceTree = SOURCE_ROOT; };
+		E88BA6621EDABC89009629A9 /* TopicSlides.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopicSlides.swift; path = FBQuest/Feature/Slides/TopicSlides.swift; sourceTree = SOURCE_ROOT; };
+		E88BA6641EDABDE5009629A9 /* TopicSlide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopicSlide.swift; path = FBQuest/Feature/Slides/TopicSlide.swift; sourceTree = SOURCE_ROOT; };
+		E88BA6661EDABEEE009629A9 /* SlidesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlidesInteractor.swift; path = FBQuest/Feature/Slides/SlidesInteractor.swift; sourceTree = SOURCE_ROOT; };
+		E88BA6681EDABF26009629A9 /* SlidesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlidesPresenter.swift; path = FBQuest/Feature/Slides/SlidesPresenter.swift; sourceTree = SOURCE_ROOT; };
+		E88BA66A1EDABF33009629A9 /* SlidesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlidesViewController.swift; path = FBQuest/Feature/Slides/SlidesViewController.swift; sourceTree = SOURCE_ROOT; };
+		E88BA66C1EDB49F8009629A9 /* SlidesConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlidesConverter.swift; path = FBQuest/Feature/Slides/SlidesConverter.swift; sourceTree = SOURCE_ROOT; };
+		E88BA66F1EDB4A49009629A9 /* Converter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		E8A1CC171EC8B52A00ED26E9 /* FBQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8A1CC461EC8B69A00ED26E9 /* AppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		E8A1CC481EC8B6B800ED26E9 /* AppPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPresenter.swift; sourceTree = "<group>"; };
@@ -132,6 +150,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E88BA66E1EDB4A35009629A9 /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+				E88BA66F1EDB4A49009629A9 /* Converter.swift */,
+			);
+			name = Converter;
+			sourceTree = "<group>";
+		};
 		E8A1CC0E1EC8B52A00ED26E9 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +185,7 @@
 				E8E7F9DE1ED6022E00F2D9AE /* Feature */,
 				E8E7F9DC1ED601C800F2D9AE /* Shared */,
 				E8A1CC481EC8B6B800ED26E9 /* AppPresenter.swift */,
+				E8A1CC451EC8B5F000ED26E9 /* Assembly */,
 				E8A1CC511EC8B6F900ED26E9 /* Assets.xcassets */,
 				E8A1CC4F1EC8B6ED00ED26E9 /* Info.plist */,
 				E8A1CC4C1EC8B6E200ED26E9 /* LaunchScreen.storyboard */,
@@ -248,7 +275,8 @@
 				E8A631371ED453F600D42862 /* PresenterAssembly.swift */,
 				E807361F1EC8D4F4008C5AE1 /* ViewControllerAssembly.swift */,
 			);
-			path = Assembly;
+			name = Assembly;
+			path = Shared/Assembly;
 			sourceTree = "<group>";
 		};
 		E8A1CC5D1EC8B87800ED26E9 /* FBQuestTests */ = {
@@ -319,8 +347,8 @@
 		E8E7F9DC1ED601C800F2D9AE /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E88BA66E1EDB4A35009629A9 /* Converter */,
 				E8E7F9F11ED603F200F2D9AE /* Interactor */,
-				E8A1CC451EC8B5F000ED26E9 /* Assembly */,
 				E8A1CC411EC8B59B00ED26E9 /* Helper */,
 				E8E7F9EF1ED603BF00F2D9AE /* Model */,
 				E8E7F9F01ED603CD00F2D9AE /* Presenter */,
@@ -422,6 +450,7 @@
 		E8E7F9E81ED6031B00F2D9AE /* Converter */ = {
 			isa = PBXGroup;
 			children = (
+				E88BA66C1EDB49F8009629A9 /* SlidesConverter.swift */,
 			);
 			path = Converter;
 			sourceTree = "<group>";
@@ -429,6 +458,7 @@
 		E8E7F9E91ED6032100F2D9AE /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				E88BA6661EDABEEE009629A9 /* SlidesInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -436,6 +466,9 @@
 		E8E7F9EA1ED6032500F2D9AE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E88BA6601EDABC7B009629A9 /* TopicSlidesList.swift */,
+				E88BA6621EDABC89009629A9 /* TopicSlides.swift */,
+				E88BA6641EDABDE5009629A9 /* TopicSlide.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -443,6 +476,7 @@
 		E8E7F9EC1ED6033900F2D9AE /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				E88BA6681EDABF26009629A9 /* SlidesPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -450,6 +484,7 @@
 		E8E7F9ED1ED6033F00F2D9AE /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E88BA65E1EDABC4C009629A9 /* TopicSlidesListResource.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -457,6 +492,7 @@
 		E8E7F9EE1ED6034400F2D9AE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E88BA66A1EDABF33009629A9 /* SlidesViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -697,23 +733,32 @@
 				E8A631491ED48A2700D42862 /* TopicList.swift in Sources */,
 				E8A631401ED47FA700D42862 /* Resource.swift in Sources */,
 				E8A1CC4B1EC8B6B800ED26E9 /* BaseViewController.swift in Sources */,
+				E88BA6701EDB4A49009629A9 /* Converter.swift in Sources */,
+				E88BA66B1EDABF33009629A9 /* SlidesViewController.swift in Sources */,
 				E8A631451ED489DC00D42862 /* MenuItemListResource.swift in Sources */,
 				E807361E1EC8CD23008C5AE1 /* BasePresenter.swift in Sources */,
+				E88BA6631EDABC89009629A9 /* TopicSlides.swift in Sources */,
 				E8A631361ED453E200D42862 /* MenuPresenter.swift in Sources */,
 				E8A1CC4A1EC8B6B800ED26E9 /* AppPresenter.swift in Sources */,
 				E85104BF1EC8C78C00BB95A6 /* MenuViewController.swift in Sources */,
 				E8A631381ED453F600D42862 /* PresenterAssembly.swift in Sources */,
 				E8A6313C1ED47DE700D42862 /* MenuInteractor.swift in Sources */,
+				E88BA6671EDABEEE009629A9 /* SlidesInteractor.swift in Sources */,
 				E8A6313A1ED476DD00D42862 /* InteractorAssembly.swift in Sources */,
 				E8A6314F1ED49C0300D42862 /* TopicListConverter.swift in Sources */,
 				E85104B91EC8BB0500BB95A6 /* AppScopeController.swift in Sources */,
+				E88BA66D1EDB49F8009629A9 /* SlidesConverter.swift in Sources */,
+				E88BA6691EDABF26009629A9 /* SlidesPresenter.swift in Sources */,
 				E85104BD1EC8BB3900BB95A6 /* ScopeController.swift in Sources */,
+				E88BA65F1EDABC4C009629A9 /* TopicSlidesListResource.swift in Sources */,
 				E8A6313E1ED47EA700D42862 /* BaseInteractor.swift in Sources */,
 				E8A631341ED4537F00D42862 /* MenuDatasource.swift in Sources */,
 				E8A631421ED4843700D42862 /* Result.swift in Sources */,
+				E88BA6651EDABDE5009629A9 /* TopicSlide.swift in Sources */,
 				E80736201EC8D4F4008C5AE1 /* ViewControllerAssembly.swift in Sources */,
 				E8A1CC471EC8B69A00ED26E9 /* AppRouter.swift in Sources */,
 				E8A631471ED48A1900D42862 /* Topic.swift in Sources */,
+				E88BA6611EDABC7B009629A9 /* TopicSlidesList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

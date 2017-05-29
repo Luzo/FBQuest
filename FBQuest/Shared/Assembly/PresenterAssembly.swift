@@ -19,5 +19,13 @@ class PresenterAssembly: Assembly {
                 view: r.resolve(MenuViewController.self)!
             )
         }
+
+        container.register(SlidesPresenter.self) { r in
+            SlidesPresenterImpl(
+                interactor: r.resolve(SlidesInteractor.self)!,
+                appRouter: AppRouter.instance,
+                view: r.resolve(SlidesViewController.self)!
+            )
+        }
     }
 }

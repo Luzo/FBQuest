@@ -19,5 +19,15 @@ class ViewControllerAssembly: Assembly {
                 presenter: r.resolve(MenuPresenter.self)!
             )
         }
+
+        container.register(SlidesViewController.self) { _ in
+            mainStoryboard.instantiateViewController(
+                withIdentifier: String(describing: SlidesViewController.self)
+            ) as! SlidesViewController
+        }.initCompleted { (r, slidesVC) in
+            slidesVC.ininitialize(
+                presenter: r.resolve(SlidesPresenter.self)!
+            )
+        }
     }
 }
