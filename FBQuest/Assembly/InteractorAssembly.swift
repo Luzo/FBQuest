@@ -39,5 +39,9 @@ class InteractorAssembly: Assembly {
                 slidesConverter: r.resolve(SlidesConverter.self)!
             )
         }.inObjectScope(.container)
+
+        container.register(QuestionsInteractor.self) { r in
+            QuestionsInteractorImpl()
+        }.inObjectScope(.container)
     }
 }

@@ -27,5 +27,13 @@ class PresenterAssembly: Assembly {
                 view: r.resolve(SlidesViewController.self)!
             )
         }
+
+        container.register(QuestionsPresenter.self) { r in
+            QuestionsPresenterImpl(
+                interactor: r.resolve(QuestionsInteractor.self)!,
+                appRouter: AppRouter.instance,
+                view: r.resolve(QuestionsViewController.self)!
+            )
+        }.inObjectScope(.container)
     }
 }

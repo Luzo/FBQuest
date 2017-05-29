@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableDescriptionTableViewCell" id="jOK-bf-ZqD" customClass="ReusableDescriptionTableViewCell" customModule="FBQuest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jOK-bf-ZqD" id="JFW-zG-PVC">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ew6-Ej-YLB">
+                        <rect key="frame" x="16" y="16" width="343" height="11.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="Ew6-Ej-YLB" secondAttribute="bottom" constant="8" id="AJe-gx-R7Z"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Ew6-Ej-YLB" secondAttribute="trailing" constant="8" id="CmR-LV-BZx"/>
+                    <constraint firstItem="Ew6-Ej-YLB" firstAttribute="top" secondItem="JFW-zG-PVC" secondAttribute="topMargin" constant="8" id="Hpp-TE-bXJ"/>
+                    <constraint firstItem="Ew6-Ej-YLB" firstAttribute="leading" secondItem="JFW-zG-PVC" secondAttribute="leadingMargin" constant="8" id="LhO-5V-c5x"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="descriptionLabel" destination="Ew6-Ej-YLB" id="k8Z-eL-fDQ"/>
+            </connections>
+            <point key="canvasLocation" x="60" y="61"/>
+        </tableViewCell>
+    </objects>
+</document>

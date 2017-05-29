@@ -55,7 +55,6 @@ final class SlidesPresenterImpl: BasePresenter<SlidesView> {
             view?.setupView(withTopicSlide: topics[selectedIndex])
         }
     }
-
 }
 
 extension SlidesPresenterImpl: SlidesPresenter {
@@ -71,6 +70,11 @@ extension SlidesPresenterImpl: SlidesPresenter {
 
     func nexSlideButtonSelected() {
         selectedIndex += 1
+        if selectedIndex == topics.count {
+            _selectedIndex = 0
+            let questionViewController = appRouter.appScope.resolve(type: QuestionsViewController.self)
+            view?.navigationViewController?.pushViewController(questionViewController, animated: true)
+        }
     }
 
     func shareButtonSelected() {

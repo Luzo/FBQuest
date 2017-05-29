@@ -45,6 +45,52 @@
             </objects>
             <point key="canvasLocation" x="628" y="-244.22788605697153"/>
         </scene>
+        <!--Questions View Controller-->
+        <scene sceneID="Kda-Uv-BD5">
+            <objects>
+                <viewController storyboardIdentifier="QuestionsViewController" id="P2q-oh-tvm" customClass="QuestionsViewController" customModule="FBQuest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EiI-O7-8Nk"/>
+                        <viewControllerLayoutGuide type="bottom" id="TU5-aO-6lD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c61-zX-Zyy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5wu-18-ciw" userLabel="I">
+                                <rect key="frame" x="24" y="28" width="327" height="611"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vmK-LN-7w6">
+                                        <rect key="frame" x="-10" y="0.0" width="345" height="611"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="vmK-LN-7w6" firstAttribute="top" secondItem="5wu-18-ciw" secondAttribute="top" id="ZoC-Bd-jpd"/>
+                                    <constraint firstAttribute="trailing" secondItem="vmK-LN-7w6" secondAttribute="trailing" constant="-8" id="bXS-gH-SRO"/>
+                                    <constraint firstItem="vmK-LN-7w6" firstAttribute="leading" secondItem="5wu-18-ciw" secondAttribute="leading" constant="-10" id="kpg-Yc-tTg"/>
+                                    <constraint firstAttribute="bottom" secondItem="vmK-LN-7w6" secondAttribute="bottom" id="uPn-HG-toz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5wu-18-ciw" firstAttribute="leading" secondItem="c61-zX-Zyy" secondAttribute="leadingMargin" constant="8" id="75W-vI-HR5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5wu-18-ciw" secondAttribute="trailing" constant="8" id="JDC-Uq-E3B"/>
+                            <constraint firstItem="TU5-aO-6lD" firstAttribute="top" secondItem="5wu-18-ciw" secondAttribute="bottom" constant="28" id="Zhd-Ly-QCt"/>
+                            <constraint firstItem="5wu-18-ciw" firstAttribute="top" secondItem="EiI-O7-8Nk" secondAttribute="bottom" constant="8" id="xge-ip-IIx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentHolder" destination="5wu-18-ciw" id="XgM-O6-GM9"/>
+                        <outlet property="tableView" destination="vmK-LN-7w6" id="Gko-43-2bt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fSi-ly-9e9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1466.4000000000001" y="77.811094452773617"/>
+        </scene>
         <!--Slides View Controller-->
         <scene sceneID="0Yv-AE-zg3">
             <objects>
