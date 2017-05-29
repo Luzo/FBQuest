@@ -2,9 +2,12 @@
 //  Copyright © 2017 LubosLehota. All rights reserved.
 //
 
+import UIKit
+
 class BasePresenter<ViewType>: Presenter{
+
     let appRouter: AppRouter
-    var view: ViewType {
+    var view: ViewType? {
         get {
             guard let castedPresenter = _view as? ViewType else {
                 fatalError("BasePresenter's associated type must be of type \(ViewType.self))")
@@ -20,7 +23,7 @@ class BasePresenter<ViewType>: Presenter{
             _view = castedView
         }
     }
-    private var _view: View!
+    fileprivate weak var _view: View?
 
     init(appRouter: AppRouter, view: ViewType) {
         self.appRouter = appRouter
@@ -28,11 +31,16 @@ class BasePresenter<ViewType>: Presenter{
     }
 
     func setupAfterInit() {}
-
 }
 
-protocol Presenter {
+protocol Presenter: AnyObject {
     func setupAfterInit()
 }
 
-protocol View {}
+protocol View: AnyObject {
+    var navigationViewController: UINavigationController? { get }
+}
+
+extension View where Self: UIViewController {
+    var navigationViewController: UINavigationController? { return navigationController }
+}
