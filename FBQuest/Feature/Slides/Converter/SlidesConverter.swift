@@ -7,7 +7,7 @@
 //
 
 class SlidesConverter: Converter {
-    func convert(input: TopicSlidesList) -> [Int: [TopicSlide]] {
+    func convert(input: TopicSlidesResponse) -> [Int: [TopicSlide]] {
         guard let items = input.items else {
             return [:]
         }

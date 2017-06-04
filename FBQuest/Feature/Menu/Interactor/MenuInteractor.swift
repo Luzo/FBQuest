@@ -28,7 +28,6 @@ final class MenuInteractor: BaseInteractor {
             switch result {
                 case .success(let list):
                     topics = topicListConverter.convert(input: list)
-                    print(topics)
                 case .failure( _): break
             }
         }

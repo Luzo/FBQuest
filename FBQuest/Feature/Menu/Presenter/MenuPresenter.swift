@@ -19,6 +19,10 @@ final class MenuPresenterImpl: BasePresenter<MenuView> {
     fileprivate var topics: [Topic] {
         return interactor?.topics ?? []
     }
+    var appEventsNotifier: AppEventsNotifier {
+        return appRouter.appScope.resolve(type: AppEventsNotifier.self)
+    }
+    fileprivate var observers = [Any]()
 
     override func setupAfterInit() {
         view?.setWithTitles(titles: topics.map { $0.name ?? "" })
@@ -27,6 +31,14 @@ final class MenuPresenterImpl: BasePresenter<MenuView> {
     init(interactor: MenuInteractor, appRouter: AppRouter, view: MenuView) {
         self.interactor = interactor
         super.init(appRouter: appRouter, view: view)
+
+        observers = [observeDismissToMenu()]
+    }
+
+    fileprivate func observeDismissToMenu() -> Any {
+        return appEventsNotifier.dismissToMenuEvent.observe { [weak self] in
+            self?.view?.navigationViewController?.popToRootViewController(animated: false)
+        }
     }
 }
 

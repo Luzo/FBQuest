@@ -34,6 +34,7 @@ final class SlidesPresenterImpl: BasePresenter<SlidesView> {
             setSlide()
         }
     }
+
     fileprivate var topics: [TopicSlide] = []
 
     override func setupAfterInit() {
@@ -73,7 +74,11 @@ extension SlidesPresenterImpl: SlidesPresenter {
         if selectedIndex == topics.count {
             _selectedIndex = 0
             let questionViewController = appRouter.appScope.resolve(type: QuestionsViewController.self)
-            view?.navigationViewController?.pushViewController(questionViewController, animated: true)
+            questionViewController.presenter?.selectedTopicId = _selectedTopicId
+            let questionNavigationController = QuestionsNavigationViewController(
+                rootViewController: questionViewController
+            )
+            view?.navigationViewController?.present(questionNavigationController, animated: true)
         }
     }
 

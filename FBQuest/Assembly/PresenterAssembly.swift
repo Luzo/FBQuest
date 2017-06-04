@@ -12,6 +12,10 @@ class PresenterAssembly: Assembly {
 
     func assemble(container: Container) {
 
+        container.register(AppEventsNotifier.self) { _ in
+            AppEventsNotifierImpl()
+        }.inObjectScope(.container)
+
         container.register(MenuPresenter.self) { r in
             MenuPresenterImpl(
                 interactor: r.resolve(MenuInteractor.self)!,
@@ -34,6 +38,14 @@ class PresenterAssembly: Assembly {
                 appRouter: AppRouter.instance,
                 view: r.resolve(QuestionsViewController.self)!
             )
-        }.inObjectScope(.container)
+        }
+
+        container.register(DonePresenter.self) { r in
+            DonePresenterImpl(
+                appRouter: AppRouter.instance,
+                view: r.resolve(DoneViewController.self)!,
+                appEventsNotifier: r.resolve(AppEventsNotifier.self)!
+            )
+        }
     }
 }

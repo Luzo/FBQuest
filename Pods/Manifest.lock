@@ -1,15 +1,18 @@
 PODS:
+  - Google-Material-Design-Icons-Swift (1.0.1)
   - ObjectMapper (2.2.6)
   - Swinject (2.1.0)
 
 DEPENDENCIES:
+  - Google-Material-Design-Icons-Swift (~> 1.0.1)
   - ObjectMapper (~> 2.2)
   - Swinject (~> 2.1.0)
 
 SPEC CHECKSUMS:
+  Google-Material-Design-Icons-Swift: ff587db57d713061f66b8457229d1af2cae84c56
   ObjectMapper: 042708195cc46c20871cbcbec0453826398273fd
   Swinject: 85e468ac75c5c2d234076f98c591d57d56bc64bc
 
-PODFILE CHECKSUM: 74d2d47c17f8f0b8152de092f7ef09e09eec105f
+PODFILE CHECKSUM: 686bf6390cf0bfc99e2c59e1fb5d67cdc7a918d4
 
 COCOAPODS: 1.2.0

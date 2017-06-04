@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-struct TopicSlidesList: Mappable {
+struct TopicSlidesResponse: Mappable {
     var items: [TopicSlides]?
 
     init?(map: Map) {}

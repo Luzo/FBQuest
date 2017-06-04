@@ -23,6 +23,10 @@ class InteractorAssembly: Assembly {
         container.register(SlidesConverter.self) { _ in
             SlidesConverter()
         }.inObjectScope(.container)
+
+        container.register(QuestionsConverter.self) { _ in
+            QuestionsConverter()
+        }.inObjectScope(.container)
     }
 
     func assembleInteractors(container: Container) {
@@ -35,13 +39,16 @@ class InteractorAssembly: Assembly {
 
         container.register(SlidesInteractor.self) { r in
             SlidesInteractorImpl(
-                topicSlidesListResource: TopicSlidesListResource(),
+                topicSlidesResource: TopicSlidesResource(),
                 slidesConverter: r.resolve(SlidesConverter.self)!
             )
         }.inObjectScope(.container)
 
         container.register(QuestionsInteractor.self) { r in
-            QuestionsInteractorImpl()
+            QuestionsInteractorImpl(
+                questionsResource: QuestionsResource(),
+                questionsConverter: r.resolve(QuestionsConverter.self)!
+            )
         }.inObjectScope(.container)
     }
 }

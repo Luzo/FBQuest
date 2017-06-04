@@ -9,9 +9,9 @@
 import UIKit
 
 enum QuestionSection: Int {
-    case Title
-    case Description
-    case Options
+    case title
+    case description
+    case options
 
     static var count: Int {
         return 3
@@ -20,14 +20,32 @@ enum QuestionSection: Int {
 
 class QuestionsDatasource: NSObject, UITableViewDataSource {
     let cellIdentifiers: [QuestionSection: String] = [
-        .Options: String(describing: AnswerOptionTableViewCell.self),
-        .Title: String(describing: ReusableTitleTableViewCell.self),
-        .Description: String(describing: ReusableDescriptionTableViewCell.self)
+        .options: String(describing: AnswerOptionTableViewCell.self),
+        .title: String(describing: ReusableTitleTableViewCell.self),
+        .description: String(describing: ReusableDescriptionTableViewCell.self)
     ]
-    var menuItems: [String] = []
+
+    fileprivate var answers: [Answer] = []
+    fileprivate var title: String?
+    fileprivate var subtitle: String?
+
+    func setup(witQuestion question: Question) {
+        answers = question.answers ?? []
+        title = question.title
+        subtitle = question.subtitle
+    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menuItems.count
+        guard let section = QuestionSection(rawValue: section) else { return 0 }
+
+        switch section {
+            case .title:
+                return 1
+            case .options:
+                return answers.count
+            case .description:
+                return 1
+        }
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -44,12 +62,15 @@ class QuestionsDatasource: NSObject, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
 
         switch section {
-            case .Title:
+            case .title:
                 let castedCell = cell as? ReusableTitleTableViewCell
-            case .Options:
+                castedCell?.titleLabel.text = title
+            case .options:
                 let castedCell = cell as? AnswerOptionTableViewCell
-            case .Description:
+                castedCell?.setupWith(answer: answers[indexPath.row], answerPosition: indexPath.row)
+            case .description:
                 let castedCell = cell as? ReusableDescriptionTableViewCell
+                castedCell?.descriptionLabel.text = title
         }
 
         return cell

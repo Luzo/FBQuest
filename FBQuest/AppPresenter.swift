@@ -17,7 +17,10 @@ class AppPresenter: UIResponder {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .black
         window?.makeKeyAndVisible()
+        setMenuAsRoot()
+    }
 
+    fileprivate func setMenuAsRoot() {
         let menuVC = self.appRouter.appScope.resolve(type: MenuViewController.self)
         let navigationVC = UINavigationController(rootViewController: menuVC)
         window?.rootViewController = navigationVC

@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Google-Material-Design-Icons-Swift-Google-Material-Design-Icons-Swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Google-Material-Design-Icons-Swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,12 +37,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4437F01E533CC39EDCB519C274EC8442</key>
+		<key>229CA853119F2EE3901E7FCD8A574A8C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A35A49BDA80A328E6205D007521E9191</key>
+		<key>3A46CA586B87B342DF0E6C46D87F2437</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8603C0025BD72FCB3DE84A1954E406CD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -43,6 +58,11 @@
 			<true/>
 		</dict>
 		<key>EC4A3DB5F8479DCBEF1B76F7775AC589</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EE739B8C3368279EA2DE8928B4E851BE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

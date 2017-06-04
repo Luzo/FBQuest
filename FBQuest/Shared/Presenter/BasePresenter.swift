@@ -37,10 +37,3 @@ protocol Presenter: AnyObject {
     func setupAfterInit()
 }
 
-protocol View: AnyObject {
-    var navigationViewController: UINavigationController? { get }
-}
-
-extension View where Self: UIViewController {
-    var navigationViewController: UINavigationController? { return navigationController }
-}

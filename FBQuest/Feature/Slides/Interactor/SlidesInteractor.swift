@@ -12,7 +12,7 @@ protocol SlidesInteractor: AnyObject {
 
 final class SlidesInteractorImpl: BaseInteractor {
 
-    fileprivate let topicSlidesListResource: TopicSlidesListResource
+    fileprivate let topicSlidesResource: TopicSlidesResource
     fileprivate let slidesConverter: SlidesConverter
     private (set) var mappedSlides: [Int: [TopicSlide]] = [:]
 
@@ -21,10 +21,10 @@ final class SlidesInteractorImpl: BaseInteractor {
     }
 
     init(
-        topicSlidesListResource: TopicSlidesListResource,
+        topicSlidesResource: TopicSlidesResource,
         slidesConverter: SlidesConverter
     ) {
-        self.topicSlidesListResource = topicSlidesListResource
+        self.topicSlidesResource = topicSlidesResource
         self.slidesConverter = slidesConverter
 
         super.init()
@@ -33,7 +33,7 @@ final class SlidesInteractorImpl: BaseInteractor {
     }
 
     fileprivate func requestResource() {
-        topicSlidesListResource.makeRequest(input: "TopicSlides") { (result) in
+        topicSlidesResource.makeRequest(input: "TopicSlides") { (result) in
             switch result {
             case .success(let list):
                 mappedSlides = slidesConverter.convert(input: list)
