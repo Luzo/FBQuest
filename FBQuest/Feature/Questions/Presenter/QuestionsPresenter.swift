@@ -11,23 +11,33 @@ import UIKit
 
 protocol QuestionsView: View {
     func set(withQuestion question: Question)
+    func set(withAnswers answers: [AnswerViewModel])
+    func showCorrectAnswers()
 }
 
 protocol QuestionsPresenter: Presenter {
     func closeButtonTapped()
+    func checkButtonTapped()
     func nextButtonTapped()
     var selectedTopicId: Int { get set }
     var questionIndex: Int { get set }
-
+    func selectedAnswer(atIndex index: Int)
 }
 
 final class QuestionsPresenterImpl: BasePresenter<QuestionsView> {
-    fileprivate var interactor: QuestionsInteractor
+    fileprivate let interactor: QuestionsInteractor
+    fileprivate let answersFormatter: AnswersFormatter
+
     fileprivate var _selectedTopicId: Int = -1
     fileprivate var questions: [Question] {
         return interactor.mappedQuestions[selectedTopicId] ?? []
     }
+    fileprivate var answers: [AnswerViewModel] = []
+
     var questionIndex: Int = 0
+
+    //temporary
+    var wasTapped: Bool = false
 
     deinit {
         print("dealloc \(self)")
@@ -35,21 +45,38 @@ final class QuestionsPresenterImpl: BasePresenter<QuestionsView> {
 
     override func setupAfterInit() {
         view?.navigationViewController?.isNavigationBarHidden = true
+
         loadQuestion()
     }
 
-    init(interactor: QuestionsInteractor, appRouter: AppRouter, view: QuestionsView) {
+    init(
+        interactor: QuestionsInteractor,
+        appRouter: AppRouter,
+        view: QuestionsView,
+        answersFormatter: AnswersFormatter
+    ) {
         self.interactor = interactor
+        self.answersFormatter = answersFormatter
 
         super.init(appRouter: appRouter, view: view)
     }
 
-    fileprivate func checkQuestion() {
-        
+    fileprivate func checkAnswer(forAnswerId answerId: Int) {
+
     }
 
     fileprivate func loadQuestion() {
-        view?.set(withQuestion: questions[questionIndex])
+        let question = questions[questionIndex]
+        answers = answersFormatter.format(model: question)
+        view?.set(withQuestion: question)
+        view?.set(withAnswers: answers)
+    }
+
+    fileprivate func goToNextQuestion() {
+        let questionViewController = appRouter.appScope.resolve(type: QuestionsViewController.self)
+        questionViewController.presenter?.questionIndex = questionIndex + 1
+        questionViewController.presenter?.selectedTopicId = selectedTopicId
+        view?.navigationViewController?.pushViewController(questionViewController, animated: true)
     }
 }
 
@@ -64,12 +91,8 @@ extension QuestionsPresenterImpl: QuestionsPresenter {
     }
 
     func nextButtonTapped() {
-        let nextIndex = questionIndex + 1
-        if nextIndex < questions.count {
-            let questionViewController = appRouter.appScope.resolve(type: QuestionsViewController.self)
-            questionViewController.presenter?.questionIndex = nextIndex
-            questionViewController.presenter?.selectedTopicId = selectedTopicId
-            view?.navigationViewController?.pushViewController(questionViewController, animated: true)
+        if questionIndex + 1 < questions.count {
+            goToNextQuestion()
         } else {
             let doneViewController = appRouter.appScope.resolve(type: DoneViewController.self)
             (view as? UIViewController)?.present(doneViewController, animated: true, completion: nil)
@@ -78,5 +101,25 @@ extension QuestionsPresenterImpl: QuestionsPresenter {
 
     func closeButtonTapped() {
         view?.navigationViewController?.dismiss(animated: true)
+    }
+
+    func selectedAnswer(atIndex index: Int) {
+        if questions[questionIndex].type ?? .simple == .simple {
+            for index in 0 ..< answers.count { answers[index].isSelected = false }
+        }
+
+        answers[index].isSelected = !answers[index].isSelected
+        view?.set(withAnswers: answers)
+    }
+
+    func checkButtonTapped() {
+        if wasTapped {
+            wasTapped = false
+            nextButtonTapped()
+            return
+        }
+
+        wasTapped = true
+        view?.showCorrectAnswers()
     }
 }

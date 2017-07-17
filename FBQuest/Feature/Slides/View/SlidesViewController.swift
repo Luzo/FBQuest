@@ -29,6 +29,10 @@ final class SlidesViewController: BaseViewController<SlidesPresenter> {
         contentHolder.layer.shadowOpacity = 0.8
         nextButton.addTarget(self, action: #selector(didTapNextButton), for: .touchUpInside)
         shareButton.addTarget(self, action: #selector(didTapShareButton), for: .touchUpInside)
+        shareButton.setTitleColor(.darkGray, for: .highlighted)
+        shareButton.setTitleColor(.clear, for: .selected)
+        nextButton.setTitleColor(.darkGray, for: .highlighted)
+        nextButton.setTitleColor(.clear, for: .selected)
     }
 
     func didTapNextButton() {
@@ -62,6 +66,6 @@ final class SlidesViewController: BaseViewController<SlidesPresenter> {
 extension SlidesViewController: SlidesView {
     func setupView(withTopicSlide topicSlide: TopicSlide) {
         titleLabel?.text = topicSlide.title
-        descriptionLabel?.text = topicSlide.description
+        descriptionLabel?.text = topicSlide.description! + "fmsdaoifa ifjsiao fjerfioeaf j oieajv eiajv aivj aiovjeariovj eaiovj eaorijv oieajv ioeajv oie hvygrw nvjk v oisn fvionv iewlvuheriuv heiuwh u fmsdaoifa ifjsiao fjerfioeaf j oieajv eiajv aivj aiovjeariovj eaiovj eaorijv oieajv ioeajv oie hvygrw nvjk v oisn fvionv i fmsdaoifa ifjsiao fjerfioeaf j oieajv eiajv aivj aiovjeariovj eaiovj eaorijv oieajv ioeajv oie hvygrw nvjk v oisn fvionv i fmsdaoifa ifjsiao fjerfioeaf j oieajv eiajv aivj aiovjeariovj eaiovj eaorijv oieajv ioeajv oie hvygrw nvjk v oisn fvionv i fmsdaoifa ifjsiao fjerfioeaf j oieajv eiajv aivj aiovjeariovj eaiovj eaorijv oieajv ioeajv oie hvygrw nvjk v oisn fvionv i fmsdaoifa ifjsiao fjerfioeaf j oieajv eiajv aivj aiovjeariovj eaiovj eaorijv oieajv ioeajv oie hvygrw nvjk v oisn fvionv i fmsdaoifa ifjsiao fjerfioeaf j oieajv eiajv aivj aiovjeariovj eaiovj eaorijv oieajv ioeajv oie hvygrw nvjk v oisn fvionv i fmsdaoifa ifjsiao fjerfioeaf j oieajv eiajv aivj aiovjeariovj eaiovj eaorijv oieajv ioeajv oie hvygrw nvjk v oisn fvionv i"
     }
 }

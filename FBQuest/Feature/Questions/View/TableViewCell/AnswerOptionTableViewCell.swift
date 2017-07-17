@@ -7,20 +7,29 @@
 //
 
 import UIKit
+import HexColors
 
 class AnswerOptionTableViewCell: UITableViewCell {
     @IBOutlet weak var optionLabel: UILabel!
     @IBOutlet weak var optionValue: UILabel!
     @IBOutlet weak var checkImage: UILabel!
 
-    func setupWith(answer: Answer, answerPosition position: Int) {
+    func setupWith(answer: AnswerViewModel, answerPosition position: Int) {
         optionLabel.text = "\("a".advanceCharacter(by: UInt32(position))))"
-        optionValue.text = answer.option
+        optionValue.text = answer.text
+        setCellSelected(answer.isSelected)
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        checkImage.textColor = isSelected ? .blue : .gray
-        // Configure the view for the selected state
+    func setup(asCorrect correct: Bool) {
+        if isSelected {
+            backgroundColor = correct ? UIColor("F0FFF0"): UIColor("FAEBD7")
+        } else {
+            backgroundColor = correct ? UIColor("FAEBD7") : UIColor("F0FFF0")
+        }
+    }
+
+    fileprivate func setCellSelected(_ selected: Bool) {
+        isSelected = selected
+        checkImage.textColor = selected ? UIColor("228818") : .gray
     }
 }

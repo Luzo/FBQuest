@@ -36,8 +36,13 @@ class PresenterAssembly: Assembly {
             QuestionsPresenterImpl(
                 interactor: r.resolve(QuestionsInteractor.self)!,
                 appRouter: AppRouter.instance,
-                view: r.resolve(QuestionsViewController.self)!
+                view: r.resolve(QuestionsViewController.self)!,
+                answersFormatter: r.resolve(AnswersFormatter.self)!
             )
+        }
+
+        container.register(AnswersFormatter.self) { _ in
+            AnswersFormatter()
         }
 
         container.register(DonePresenter.self) { r in

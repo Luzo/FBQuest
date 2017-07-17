@@ -16,6 +16,7 @@ final class MenuItemTableCell: UITableViewCell {
     func setupAppearence() {
         contentHolder.layer.borderColor = UIColor.black.cgColor
         contentHolder.layer.borderWidth = 0.5
+        backgroundColor = .clear
     }
 
     func setTitle(title: String?) {

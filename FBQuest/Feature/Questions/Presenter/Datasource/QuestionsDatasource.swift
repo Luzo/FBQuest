@@ -12,27 +12,35 @@ enum QuestionSection: Int {
     case title
     case description
     case options
+    case simpleOptions
 
     static var count: Int {
-        return 3
+        return 4
     }
 }
 
-class QuestionsDatasource: NSObject, UITableViewDataSource {
-    let cellIdentifiers: [QuestionSection: String] = [
+final class QuestionsDatasource: NSObject, UITableViewDataSource {
+    let cellIdentifiers: [ QuestionSection: String] = [
         .options: String(describing: AnswerOptionTableViewCell.self),
+        .simpleOptions: String(describing: SimpleAnswerOptionTableViewCell.self),
         .title: String(describing: ReusableTitleTableViewCell.self),
         .description: String(describing: ReusableDescriptionTableViewCell.self)
     ]
 
-    fileprivate var answers: [Answer] = []
+    fileprivate var answers: [AnswerViewModel] = []
     fileprivate var title: String?
     fileprivate var subtitle: String?
+    fileprivate var questionType: QuestionType = .simple
+    var showCorrectAnswers = false
 
-    func setup(witQuestion question: Question) {
-        answers = question.answers ?? []
+    func setup(withQuestion question: Question) {
         title = question.title
         subtitle = question.subtitle
+        questionType = question.type ?? .simple
+    }
+
+    func setup(withAnswers answers: [AnswerViewModel]) {
+        self.answers = answers
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,7 +50,9 @@ class QuestionsDatasource: NSObject, UITableViewDataSource {
             case .title:
                 return 1
             case .options:
-                return answers.count
+                return questionType == .simple ? 0 : answers.count
+            case .simpleOptions:
+                return questionType == .simple ? answers.count : 0
             case .description:
                 return 1
         }
@@ -68,6 +78,15 @@ class QuestionsDatasource: NSObject, UITableViewDataSource {
             case .options:
                 let castedCell = cell as? AnswerOptionTableViewCell
                 castedCell?.setupWith(answer: answers[indexPath.row], answerPosition: indexPath.row)
+                if showCorrectAnswers {
+                    castedCell?.setup(asCorrect: answers[indexPath.row].isCorrect)
+                }
+            case .simpleOptions:
+                let castedCell = cell as? SimpleAnswerOptionTableViewCell 
+                castedCell?.setupWith(answer: answers[indexPath.row], answerPosition: indexPath.row)
+                if showCorrectAnswers {
+                    castedCell?.setup(asCorrect: answers[indexPath.row].isCorrect)
+                }
             case .description:
                 let castedCell = cell as? ReusableDescriptionTableViewCell
                 castedCell?.descriptionLabel.text = title

@@ -32,6 +32,7 @@ final class QuestionsViewController: BaseViewController<QuestionsPresenter> {
         tableView.rowHeight = UITableViewAutomaticDimension
         [
             String(describing: AnswerOptionTableViewCell.self),
+            String(describing: SimpleAnswerOptionTableViewCell.self),
             String(describing: ReusableTitleTableViewCell.self),
             String(describing: ReusableDescriptionTableViewCell.self)
         ].forEach {
@@ -47,11 +48,30 @@ final class QuestionsViewController: BaseViewController<QuestionsPresenter> {
     @IBAction func didTapOnCloseButton(_ sender: UIButton) {
         presenter?.closeButtonTapped()
     }
+    
+    @IBAction func didTapOnCheckButton(_ sender: Any) {
+        presenter?.checkButtonTapped()
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.selectedAnswer(atIndex: indexPath.row)
+    }
 }
 
 extension QuestionsViewController: QuestionsView {
     func set(withQuestion question: Question) {
-        questionDatasource.setup(witQuestion: question)
+        questionDatasource.setup(withQuestion: question)
+        tableView.allowsMultipleSelection = (question.type ?? .simple) == .multiple
+        tableView.reloadData()
+    }
+
+    func set(withAnswers answers: [AnswerViewModel]) {
+        questionDatasource.setup(withAnswers: answers)
+        tableView.reloadData()
+    }
+
+    func showCorrectAnswers() {
+        questionDatasource.showCorrectAnswers = true
         tableView.reloadData()
     }
 }

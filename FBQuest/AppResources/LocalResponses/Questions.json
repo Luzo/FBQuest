@@ -9,15 +9,15 @@
 					"type": "multiple",
 					"answers":[
 						{
-							"optionID": 1,
+							"optionID": 0,
 							"option":"afsadfposkafop"
 						},
 						{
-							"optionID": 2,
+							"optionID": 1,
 							"option":"afsadfposkafopfsdaf"
 						},
 						{
-							"optionID": 3,
+							"optionID": 2,
 							"option":"afsadfferfaposkafop"
 						}
 					],
@@ -31,20 +31,20 @@
 					"type": "simple",
 					"answers":[
 						{
-							"optionID": 1,
+							"optionID": 0,
 							"option":"afsadfposkafop"
 						},
 						{
-							"optionID": 2,
+							"optionID": 1,
 							"option":"afsadfposkafopfsdaf"
 						},
 						{
-							"optionID": 3,
+							"optionID": 2,
 							"option":"afsadfferfaposkafop"
 						}
 					],
 					"correctAnswers": [
-						3
+						2
 					]
 				}
 			]
@@ -58,15 +58,15 @@
 					"type": "simple",
 					"answers":[
 						{
-							"optionID": 1,
+							"optionID": 0,
 							"option":"afsadfposkafop"
 						},
 						{
-							"optionID": 2,
+							"optionID": 1,
 							"option":"afsadfposkafopfsdaf"
 						},
 						{
-							"optionID": 3,
+							"optionID": 2,
 							"option":"afsadfferfaposkafop"
 						}
 					],

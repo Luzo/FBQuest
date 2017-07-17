@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HexColors.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -25,6 +30,11 @@
 			<false/>
 		</dict>
 		<key>Pods-FBQuestTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SWGradientView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,12 +52,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>2AB8FFBCE75B55A8638948CF9AC630B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3A46CA586B87B342DF0E6C46D87F2437</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8603C0025BD72FCB3DE84A1954E406CD</key>
+		<key>45C565FD557C84DFBB7A05A58CB8C5CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>791BF599FFC591EF589435D248015CFF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B9770CAD89CEAA776D98E677F29CF43E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -58,11 +83,6 @@
 			<true/>
 		</dict>
 		<key>EC4A3DB5F8479DCBEF1B76F7775AC589</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EE739B8C3368279EA2DE8928B4E851BE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
