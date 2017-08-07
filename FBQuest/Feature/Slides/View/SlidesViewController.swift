@@ -23,10 +23,6 @@ final class SlidesViewController: BaseViewController<SlidesPresenter> {
         print("dealloc \(self)")
     }
     override func viewDidLoad() {
-
-        contentHolder.layer.shadowColor = UIColor.black.cgColor
-        contentHolder.layer.shadowOffset = CGSize(width: 2, height: 2)
-        contentHolder.layer.shadowOpacity = 0.8
         nextButton.addTarget(self, action: #selector(didTapNextButton), for: .touchUpInside)
         shareButton.addTarget(self, action: #selector(didTapShareButton), for: .touchUpInside)
         shareButton.setTitleColor(.darkGray, for: .highlighted)

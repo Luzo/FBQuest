@@ -20,9 +20,6 @@ final class QuestionsViewController: BaseViewController<QuestionsPresenter> {
 
     override func viewDidLoad() {
         setupTableView()
-        contentHolder.layer.shadowColor = UIColor.black.cgColor
-        contentHolder.layer.shadowOffset = CGSize(width: 2, height: 2)
-        contentHolder.layer.shadowOpacity = 0.8
     }
 
     fileprivate func setupTableView() {

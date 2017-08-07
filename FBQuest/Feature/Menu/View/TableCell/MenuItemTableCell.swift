@@ -14,8 +14,6 @@ final class MenuItemTableCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
 
     func setupAppearence() {
-        contentHolder.layer.borderColor = UIColor.black.cgColor
-        contentHolder.layer.borderWidth = 0.5
         backgroundColor = .clear
     }
 

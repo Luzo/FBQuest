@@ -66,6 +66,9 @@
 		E8D3C9FD1EE1DA4B00627C82 /* EventCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3C9FC1EE1DA4B00627C82 /* EventCenter.swift */; };
 		E8D3C9FF1EE1DA7900627C82 /* BaseNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3C9FE1EE1DA7900627C82 /* BaseNotificationCenter.swift */; };
 		E8D3CA011EE1DAA900627C82 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3CA001EE1DAA900627C82 /* Weak.swift */; };
+		E8E1647B1F24FEC600D8FC11 /* BorderedLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1647A1F24FEC600D8FC11 /* BorderedLabelView.swift */; };
+		E8E1647D1F25177700D8FC11 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1647C1F25177700D8FC11 /* Colors.swift */; };
+		E8E164801F25193C00D8FC11 /* ShadowedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1647F1F25193C00D8FC11 /* ShadowedView.swift */; };
 		E8EDB6F91EE3E9FC003AEACF /* Questions.json in Resources */ = {isa = PBXBuildFile; fileRef = E8E7F9D51ED5FF0500F2D9AE /* Questions.json */; };
 		E8EDB6FA1EE3E9FC003AEACF /* TopicSlides.json in Resources */ = {isa = PBXBuildFile; fileRef = E8E7F9D71ED5FF0500F2D9AE /* TopicSlides.json */; };
 		E8EDB6FB1EE3E9FC003AEACF /* Topics.json in Resources */ = {isa = PBXBuildFile; fileRef = E8E7F9D61ED5FF0500F2D9AE /* Topics.json */; };
@@ -160,6 +163,9 @@
 		E8D3C9FC1EE1DA4B00627C82 /* EventCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventCenter.swift; path = FBQuest/Shared/View/EventCenter.swift; sourceTree = SOURCE_ROOT; };
 		E8D3C9FE1EE1DA7900627C82 /* BaseNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseNotificationCenter.swift; path = FBQuest/Shared/View/BaseNotificationCenter.swift; sourceTree = SOURCE_ROOT; };
 		E8D3CA001EE1DAA900627C82 /* Weak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Weak.swift; path = FBQuest/Shared/View/Weak.swift; sourceTree = SOURCE_ROOT; };
+		E8E1647A1F24FEC600D8FC11 /* BorderedLabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedLabelView.swift; sourceTree = "<group>"; };
+		E8E1647C1F25177700D8FC11 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		E8E1647F1F25193C00D8FC11 /* ShadowedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowedView.swift; sourceTree = "<group>"; };
 		E8E7F9D51ED5FF0500F2D9AE /* Questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Questions.json; sourceTree = "<group>"; };
 		E8E7F9D61ED5FF0500F2D9AE /* Topics.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Topics.json; sourceTree = "<group>"; };
 		E8E7F9D71ED5FF0500F2D9AE /* TopicSlides.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TopicSlides.json; sourceTree = "<group>"; };
@@ -290,9 +296,10 @@
 		E8A1CC3B1EC8B53C00ED26E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E8E1647E1F25192500D8FC11 /* Primitives */,
 				E8A1CC491EC8B6B800ED26E9 /* BaseViewController.swift */,
 				E8F5FD291EDD307800FA81B2 /* View.swift */,
-				E8D3C9F01EE1CD5200627C82 /* BorderedView.swift */,
+				E8E1647C1F25177700D8FC11 /* Colors.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -446,6 +453,16 @@
 				E8D3CA001EE1DAA900627C82 /* Weak.swift */,
 			);
 			name = Notifications;
+			sourceTree = "<group>";
+		};
+		E8E1647E1F25192500D8FC11 /* Primitives */ = {
+			isa = PBXGroup;
+			children = (
+				E8D3C9F01EE1CD5200627C82 /* BorderedView.swift */,
+				E8E1647A1F24FEC600D8FC11 /* BorderedLabelView.swift */,
+				E8E1647F1F25193C00D8FC11 /* ShadowedView.swift */,
+			);
+			name = Primitives;
 			sourceTree = "<group>";
 		};
 		E8E7F9DB1ED6019300F2D9AE /* Menu */ = {
@@ -894,6 +911,7 @@
 				E8D3C9FF1EE1DA7900627C82 /* BaseNotificationCenter.swift in Sources */,
 				E8F5FD1D1EDC8CAD00FA81B2 /* ReusableDescriptionTableViewCell.swift in Sources */,
 				E8A631301ED44CC600D42862 /* MenuItemTableCell.swift in Sources */,
+				E8E164801F25193C00D8FC11 /* ShadowedView.swift in Sources */,
 				E8A631491ED48A2700D42862 /* TopicList.swift in Sources */,
 				E8D3C9E51EE19EB700627C82 /* Questions.swift in Sources */,
 				E8A631401ED47FA700D42862 /* Resource.swift in Sources */,
@@ -933,8 +951,10 @@
 				E85104BD1EC8BB3900BB95A6 /* ScopeController.swift in Sources */,
 				E8F5FD2A1EDD307800FA81B2 /* View.swift in Sources */,
 				E8F5FD1A1EDC8C1C00FA81B2 /* ReusableTitleTableViewCell.swift in Sources */,
+				E8E1647D1F25177700D8FC11 /* Colors.swift in Sources */,
 				E85A2B671F1AA8D100B28F0D /* SimpleAnswerOptionTableViewCell.swift in Sources */,
 				E8F5FD0E1EDC832600FA81B2 /* QuestionsInteractor.swift in Sources */,
+				E8E1647B1F24FEC600D8FC11 /* BorderedLabelView.swift in Sources */,
 				E8F5FD0C1EDC831E00FA81B2 /* QuestionsPresenter.swift in Sources */,
 				E88BA65F1EDABC4C009629A9 /* TopicSlidesResource.swift in Sources */,
 				E8A6313E1ED47EA700D42862 /* BaseInteractor.swift in Sources */,

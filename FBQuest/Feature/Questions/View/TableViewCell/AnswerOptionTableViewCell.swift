@@ -7,12 +7,11 @@
 //
 
 import UIKit
-import HexColors
 
 class AnswerOptionTableViewCell: UITableViewCell {
     @IBOutlet weak var optionLabel: UILabel!
     @IBOutlet weak var optionValue: UILabel!
-    @IBOutlet weak var checkImage: UILabel!
+    @IBOutlet weak var checkImage: BorderedLabelView!
 
     func setupWith(answer: AnswerViewModel, answerPosition position: Int) {
         optionLabel.text = "\("a".advanceCharacter(by: UInt32(position))))"
@@ -22,14 +21,14 @@ class AnswerOptionTableViewCell: UITableViewCell {
 
     func setup(asCorrect correct: Bool) {
         if isSelected {
-            backgroundColor = correct ? UIColor("F0FFF0"): UIColor("FAEBD7")
-        } else {
-            backgroundColor = correct ? UIColor("FAEBD7") : UIColor("F0FFF0")
+            backgroundColor = correct ? Colors.CorrectOptionBackground : Colors.IncorrectOptionBackground
+        } else if !isSelected && correct {
+            backgroundColor = Colors.CorrectOptionBackground
         }
     }
 
     fileprivate func setCellSelected(_ selected: Bool) {
         isSelected = selected
-        checkImage.textColor = selected ? UIColor("228818") : .gray
+        checkImage.borderColor = selected ? Colors.SelectedOptionColor : Colors.NotSelectedOptionColor
     }
 }
