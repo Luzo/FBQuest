@@ -7,7 +7,7 @@
 //
 
 protocol MenuView: View {
-    func setWithTitles(titles: [String])
+    func setWithTopics(topics: [Topic])
 }
 
 protocol MenuPresenter: Presenter {
@@ -25,7 +25,7 @@ final class MenuPresenterImpl: BasePresenter<MenuView> {
     fileprivate var observers = [Any]()
 
     override func setupAfterInit() {
-        view?.setWithTitles(titles: topics.map { $0.name ?? "" })
+        view?.setWithTopics(topics: topics)
     }
 
     init(interactor: MenuInteractor, appRouter: AppRouter, view: MenuView) {
@@ -44,7 +44,7 @@ final class MenuPresenterImpl: BasePresenter<MenuView> {
 
 extension MenuPresenterImpl: MenuPresenter {
     func topicSelected(atIndex index: Int) {
-        guard let topicId = topics[index].groupID else {
+        guard let topicId = topics[index].id else {
             assertionFailure("Missing topicID")
             return
         }

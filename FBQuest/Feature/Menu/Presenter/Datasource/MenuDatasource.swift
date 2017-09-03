@@ -10,7 +10,7 @@ import UIKit
 
 class MenuDataSource: NSObject, UITableViewDataSource {
     let menuItemCellIdentifier = String(describing: MenuItemTableCell.self)
-    var menuItems: [String] = []
+    var menuItems: [Topic] = []
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuItems.count
@@ -24,7 +24,9 @@ class MenuDataSource: NSObject, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: menuItemCellIdentifier, for: indexPath)
         let menuItemCell = cell as? MenuItemTableCell
         menuItemCell?.setupAppearence()
-        menuItemCell?.setTitle(title: menuItems[indexPath.row])
+        let item = menuItems[indexPath.row]
+        menuItemCell?.setTitle(title: item.name)
+        menuItemCell?.setImage(image: item.image)
 
         return cell
     }

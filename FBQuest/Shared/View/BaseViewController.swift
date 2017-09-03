@@ -26,6 +26,16 @@ class BaseViewController<PresenterType>: UIViewController {
 
     func ininitialize(presenter: PresenterType) {
         self.presenter = presenter
+        setupViewLayout()
+    }
+
+    func setupViewLayout() {
+        view.backgroundColor = Colors.Background
+        UINavigationBar.appearance().backgroundColor = Colors.NavigationBar
+        UINavigationBar.appearance().barTintColor = Colors.NavigationBar
+        UINavigationBar.appearance().tintColor = .white
+
+        UIApplication.shared.statusBarStyle = .lightContent
     }
 
     override func viewWillAppear(_ animated: Bool) {

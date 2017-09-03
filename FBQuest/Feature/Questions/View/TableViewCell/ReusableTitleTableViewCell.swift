@@ -11,4 +11,8 @@ import UIKit
 class ReusableTitleTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
+
+    func setupStyles() {
+        titleLabel.font = Fonts.H2Font
+    }
 }

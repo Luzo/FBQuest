@@ -13,6 +13,11 @@ class AnswerOptionTableViewCell: UITableViewCell {
     @IBOutlet weak var optionValue: UILabel!
     @IBOutlet weak var checkImage: BorderedLabelView!
 
+    func setupStyles() {
+        optionLabel?.font = Fonts.TextFontLight
+        optionValue?.font = Fonts.TextFontLight
+    }
+
     func setupWith(answer: AnswerViewModel, answerPosition position: Int) {
         optionLabel.text = "\("a".advanceCharacter(by: UInt32(position))))"
         optionValue.text = answer.text

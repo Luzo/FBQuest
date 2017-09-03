@@ -12,6 +12,7 @@ final class MenuItemTableCell: UITableViewCell {
 
     @IBOutlet weak var contentHolder: UIView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var cellImageView: UIImageView!
 
     func setupAppearence() {
         backgroundColor = .clear
@@ -19,5 +20,9 @@ final class MenuItemTableCell: UITableViewCell {
 
     func setTitle(title: String?) {
         nameLabel.text = title
+    }
+
+    func setImage(image: String?) {
+        cellImageView.image = image.flatMap { UIImage(named: $0) }
     }
 }

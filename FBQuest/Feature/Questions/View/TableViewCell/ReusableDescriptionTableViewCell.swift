@@ -11,4 +11,8 @@ import UIKit
 class ReusableDescriptionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var descriptionLabel: UILabel!
+
+    func setupStyles() {
+        descriptionLabel?.font = Fonts.TextFont
+    }
 }

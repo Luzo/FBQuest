@@ -35,6 +35,7 @@
 		E8A1CC521EC8B6F900ED26E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8A1CC511EC8B6F900ED26E9 /* Assets.xcassets */; };
 		E8A1CC571EC8B7FA00ED26E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8A1CC561EC8B7FA00ED26E9 /* Main.storyboard */; };
 		E8A1CC5F1EC8B87800ED26E9 /* FBQuestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A1CC5E1EC8B87800ED26E9 /* FBQuestTests.swift */; };
+		E8A58C391F51F607008EBF06 /* StatusBarCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A58C381F51F607008EBF06 /* StatusBarCoverView.swift */; };
 		E8A631301ED44CC600D42862 /* MenuItemTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A6312E1ED44CC600D42862 /* MenuItemTableCell.swift */; };
 		E8A631311ED44CC600D42862 /* MenuItemTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8A6312F1ED44CC600D42862 /* MenuItemTableCell.xib */; };
 		E8A631341ED4537F00D42862 /* MenuDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A631331ED4537F00D42862 /* MenuDatasource.swift */; };
@@ -72,6 +73,8 @@
 		E8EDB6F91EE3E9FC003AEACF /* Questions.json in Resources */ = {isa = PBXBuildFile; fileRef = E8E7F9D51ED5FF0500F2D9AE /* Questions.json */; };
 		E8EDB6FA1EE3E9FC003AEACF /* TopicSlides.json in Resources */ = {isa = PBXBuildFile; fileRef = E8E7F9D71ED5FF0500F2D9AE /* TopicSlides.json */; };
 		E8EDB6FB1EE3E9FC003AEACF /* Topics.json in Resources */ = {isa = PBXBuildFile; fileRef = E8E7F9D61ED5FF0500F2D9AE /* Topics.json */; };
+		E8F183A71F5B1555004837DF /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F183A61F5B1555004837DF /* Fonts.swift */; };
+		E8F183A91F5B20F0004837DF /* Flaticon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8F183A81F5B20BD004837DF /* Flaticon.ttf */; };
 		E8F5FD0A1EDC831200FA81B2 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5FD091EDC831200FA81B2 /* QuestionsViewController.swift */; };
 		E8F5FD0C1EDC831E00FA81B2 /* QuestionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5FD0B1EDC831E00FA81B2 /* QuestionsPresenter.swift */; };
 		E8F5FD0E1EDC832600FA81B2 /* QuestionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5FD0D1EDC832600FA81B2 /* QuestionsInteractor.swift */; };
@@ -132,6 +135,7 @@
 		E8A1CC5C1EC8B87800ED26E9 /* FBQuestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FBQuestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8A1CC5E1EC8B87800ED26E9 /* FBQuestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBQuestTests.swift; sourceTree = "<group>"; };
 		E8A1CC601EC8B87800ED26E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8A58C381F51F607008EBF06 /* StatusBarCoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarCoverView.swift; sourceTree = "<group>"; };
 		E8A6312E1ED44CC600D42862 /* MenuItemTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemTableCell.swift; sourceTree = "<group>"; };
 		E8A6312F1ED44CC600D42862 /* MenuItemTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuItemTableCell.xib; sourceTree = "<group>"; };
 		E8A631331ED4537F00D42862 /* MenuDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuDatasource.swift; sourceTree = "<group>"; };
@@ -169,6 +173,8 @@
 		E8E7F9D51ED5FF0500F2D9AE /* Questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Questions.json; sourceTree = "<group>"; };
 		E8E7F9D61ED5FF0500F2D9AE /* Topics.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Topics.json; sourceTree = "<group>"; };
 		E8E7F9D71ED5FF0500F2D9AE /* TopicSlides.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TopicSlides.json; sourceTree = "<group>"; };
+		E8F183A61F5B1555004837DF /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		E8F183A81F5B20BD004837DF /* Flaticon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Flaticon.ttf; path = "../../../../../../Downloads/149086-essential-set/font/Flaticon.ttf"; sourceTree = "<group>"; };
 		E8F5FD091EDC831200FA81B2 /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		E8F5FD0B1EDC831E00FA81B2 /* QuestionsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsPresenter.swift; sourceTree = "<group>"; };
 		E8F5FD0D1EDC832600FA81B2 /* QuestionsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsInteractor.swift; sourceTree = "<group>"; };
@@ -300,6 +306,7 @@
 				E8A1CC491EC8B6B800ED26E9 /* BaseViewController.swift */,
 				E8F5FD291EDD307800FA81B2 /* View.swift */,
 				E8E1647C1F25177700D8FC11 /* Colors.swift */,
+				E8F183A61F5B1555004837DF /* Fonts.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -427,6 +434,7 @@
 		E8D3C9D81EE1600C00627C82 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				E8F183A81F5B20BD004837DF /* Flaticon.ttf */,
 				E8D3C9DA1EE1603000627C82 /* GMDIcons.ttf */,
 			);
 			path = Fonts;
@@ -461,6 +469,7 @@
 				E8D3C9F01EE1CD5200627C82 /* BorderedView.swift */,
 				E8E1647A1F24FEC600D8FC11 /* BorderedLabelView.swift */,
 				E8E1647F1F25193C00D8FC11 /* ShadowedView.swift */,
+				E8A58C381F51F607008EBF06 /* StatusBarCoverView.swift */,
 			);
 			name = Primitives;
 			sourceTree = "<group>";
@@ -795,6 +804,7 @@
 				E85A2B691F1AAB8F00B28F0D /* SimpleAnswerOptionTableViewCell.xib in Resources */,
 				E8A631311ED44CC600D42862 /* MenuItemTableCell.xib in Resources */,
 				E8A1CC571EC8B7FA00ED26E9 /* Main.storyboard in Resources */,
+				E8F183A91F5B20F0004837DF /* Flaticon.ttf in Resources */,
 				E8F5FD1F1EDC8CD700FA81B2 /* ReusableDescriptionTableViewCell.xib in Resources */,
 				E8F5FD1B1EDC8C1C00FA81B2 /* ReusableTitleTableViewCell.xib in Resources */,
 				E8D3C9DB1EE1603000627C82 /* GMDIcons.ttf in Resources */,
@@ -956,6 +966,7 @@
 				E8F5FD0E1EDC832600FA81B2 /* QuestionsInteractor.swift in Sources */,
 				E8E1647B1F24FEC600D8FC11 /* BorderedLabelView.swift in Sources */,
 				E8F5FD0C1EDC831E00FA81B2 /* QuestionsPresenter.swift in Sources */,
+				E8F183A71F5B1555004837DF /* Fonts.swift in Sources */,
 				E88BA65F1EDABC4C009629A9 /* TopicSlidesResource.swift in Sources */,
 				E8A6313E1ED47EA700D42862 /* BaseInteractor.swift in Sources */,
 				E8A631341ED4537F00D42862 /* MenuDatasource.swift in Sources */,
@@ -967,6 +978,7 @@
 				E80736201EC8D4F4008C5AE1 /* ViewControllerAssembly.swift in Sources */,
 				E8A1CC471EC8B69A00ED26E9 /* AppRouter.swift in Sources */,
 				E8D3C9E71EE19EC100627C82 /* Question.swift in Sources */,
+				E8A58C391F51F607008EBF06 /* StatusBarCoverView.swift in Sources */,
 				E8A631471ED48A1900D42862 /* Topic.swift in Sources */,
 				E8D3C9F51EE1D25B00627C82 /* DonePresenter.swift in Sources */,
 				E88BA6611EDABC7B009629A9 /* TopicSlidesResponse.swift in Sources */,

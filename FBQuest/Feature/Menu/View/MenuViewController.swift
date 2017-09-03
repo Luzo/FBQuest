@@ -15,7 +15,8 @@ final class MenuViewController: BaseViewController<MenuPresenter> {
         presenter: MenuPresenter
     ) {
         self.datasource = datasource
-        self.presenter = presenter
+
+        super.ininitialize(presenter: presenter)
     }
 
     override func viewDidLoad() {
@@ -29,6 +30,7 @@ final class MenuViewController: BaseViewController<MenuPresenter> {
         table.separatorStyle = .none
         table.rowHeight = UITableViewAutomaticDimension
         table.estimatedRowHeight = 40
+        table.sectionHeaderHeight = 0
     }
 
     //MARK: TABLEVIEW DELEGATE - cannot be implemented in generic class extension
@@ -36,11 +38,16 @@ final class MenuViewController: BaseViewController<MenuPresenter> {
         presenter?.topicSelected(atIndex: indexPath.row)
         tableView.deselectRow(at: indexPath, animated: false)
     }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return nil
+    }
 }
 
 extension MenuViewController: MenuView {
-    func setWithTitles(titles: [String]) {
-        datasource.menuItems = titles
+    //TODO: rework with viewModel
+    func setWithTopics(topics: [Topic]) {
+        datasource.menuItems = topics
         table.reloadData()
     }
 }

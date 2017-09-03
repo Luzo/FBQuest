@@ -11,6 +11,7 @@ import UIKit
 
 final class SlidesViewController: BaseViewController<SlidesPresenter> {
 
+    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var contentHolder: UIView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
@@ -18,10 +19,13 @@ final class SlidesViewController: BaseViewController<SlidesPresenter> {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var topicImageView: UIImageView!
+    @IBOutlet weak var titleToDescriptionConstraint: NSLayoutConstraint!
 
     deinit {
         print("dealloc \(self)")
+
     }
+
     override func viewDidLoad() {
         nextButton.addTarget(self, action: #selector(didTapNextButton), for: .touchUpInside)
         shareButton.addTarget(self, action: #selector(didTapShareButton), for: .touchUpInside)
@@ -29,6 +33,8 @@ final class SlidesViewController: BaseViewController<SlidesPresenter> {
         shareButton.setTitleColor(.clear, for: .selected)
         nextButton.setTitleColor(.darkGray, for: .highlighted)
         nextButton.setTitleColor(.clear, for: .selected)
+        titleLabel.font = Fonts.H1Font
+        descriptionLabel.font = Fonts.TextFont
     }
 
     func didTapNextButton() {
@@ -62,6 +68,9 @@ final class SlidesViewController: BaseViewController<SlidesPresenter> {
 extension SlidesViewController: SlidesView {
     func setupView(withTopicSlide topicSlide: TopicSlide) {
         titleLabel?.text = topicSlide.title
-        descriptionLabel?.text = topicSlide.description! + "fmsdaoifa ifjsiao fjerfioeaf j oieajv eiajv aivj aiovjeariovj eaiovj eaorijv oieajv ioeajv oie hvygrw nvjk v oisn fvionv iewlvuheriuv heiuwh u fmsdaoifa ifjsiao fjerfioeaf j oieajv eiajv aivj aiovjeariovj eaiovj eaorijv oieajv ioeajv oie hvygrw nvjk v oisn fvionv i fmsdaoifa ifjsiao fjerfioeaf j oieajv eiajv aivj aiovjeariovj eaiovj eaorijv oieajv ioeajv oie hvygrw nvjk v oisn fvionv i fmsdaoifa ifjsiao fjerfioeaf j oieajv eiajv aivj aiovjeariovj eaiovj eaorijv oieajv ioeajv oie hvygrw nvjk v oisn fvionv i fmsdaoifa ifjsiao fjerfioeaf j oieajv eiajv aivj aiovjeariovj eaiovj eaorijv oieajv ioeajv oie hvygrw nvjk v oisn fvionv i fmsdaoifa ifjsiao fjerfioeaf j oieajv eiajv aivj aiovjeariovj eaiovj eaorijv oieajv ioeajv oie hvygrw nvjk v oisn fvionv i fmsdaoifa ifjsiao fjerfioeaf j oieajv eiajv aivj aiovjeariovj eaiovj eaorijv oieajv ioeajv oie hvygrw nvjk v oisn fvionv i fmsdaoifa ifjsiao fjerfioeaf j oieajv eiajv aivj aiovjeariovj eaiovj eaorijv oieajv ioeajv oie hvygrw nvjk v oisn fvionv i"
+        descriptionLabel?.text = topicSlide.description
+        topicImageView?.image = topicSlide.image.flatMap { UIImage(named: $0) }
+        topicImageView?.isHidden = topicSlide.image == nil
+        titleToDescriptionConstraint?.priority = topicSlide.image == nil ? 999 : 1
     }
 }

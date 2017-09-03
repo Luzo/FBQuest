@@ -1,17 +1,9 @@
 {
 	"topics": [
-		{
-            "topicId": 1,
-			"name": "Abra",
-			"tileColor": "#ffffff",
-			"groupID": 2
-		},
-		{
-            "topicId": 2,
-			"name": "Kadabra",
-			"groupID": 1,
-			"tileColor": "#fefefe"
-		}
+       {
+           "topicId": 1,
+           "image": "T1"
+       }               
 	]
 }
 

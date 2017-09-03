@@ -4,24 +4,12 @@
 			"topicId": 1,
 			"slides": [
 				{
-					"title": "Cool title",
-					"description": "Cool description",
-					"image":"slide1.png"
+					"title": "Ads Manager",
+					"description": "While managing your campaigns, you need to choose the best suitable tool. Facebook offers you two of the best ones. Ads Manager is the basic tool usable by beginners and pros alike. This tool is best for overviews and statistics.",
 				},
 				{
-					"title": "Cool title2",
-					"description": "Cool description",
-					"image":"slide1.png"
-				}
-			]
-		},
-		{
-			"topicId": 2,
-			"slides": [
-				{
-					"title": "Cool title",
-					"description": "Cool description",
-					"image":"slide1.png"
+					"title": "Power Editor",
+					"description": "Power Editor is for you if you would like to launch more advanced types of campaigns (dynamic ads) and create campaigns at faster pace. Othe advantages are option to simply duplicate items and import / export campaigns.",
 				}
 			]
 		}

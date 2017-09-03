@@ -75,21 +75,25 @@ final class QuestionsDatasource: NSObject, UITableViewDataSource {
             case .title:
                 let castedCell = cell as? ReusableTitleTableViewCell
                 castedCell?.titleLabel.text = title
+                castedCell?.setupStyles()
             case .options:
                 let castedCell = cell as? AnswerOptionTableViewCell
                 castedCell?.setupWith(answer: answers[indexPath.row], answerPosition: indexPath.row)
+                castedCell?.setupStyles()
                 if showCorrectAnswers {
                     castedCell?.setup(asCorrect: answers[indexPath.row].isCorrect)
                 }
             case .simpleOptions:
                 let castedCell = cell as? SimpleAnswerOptionTableViewCell 
                 castedCell?.setupWith(answer: answers[indexPath.row], answerPosition: indexPath.row)
+                castedCell?.setupStyles()
                 if showCorrectAnswers {
                     castedCell?.setup(asCorrect: answers[indexPath.row].isCorrect)
                 }
             case .description:
                 let castedCell = cell as? ReusableDescriptionTableViewCell
-                castedCell?.descriptionLabel.text = title
+                castedCell?.setupStyles()
+                castedCell?.descriptionLabel.text = subtitle
         }
 
         return cell

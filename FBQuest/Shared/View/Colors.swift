@@ -14,4 +14,7 @@ struct Colors {
     static let CorrectOptionBackground = UIColor("F0FFF0")!
     static let SelectedOptionColor = UIColor("228818")!
     static let NotSelectedOptionColor = UIColor.gray
+
+    static let Background = UIColor("B5E5FB")!
+    static let NavigationBar = UIColor("1EAAF1")!
 }

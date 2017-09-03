@@ -4,74 +4,25 @@
 			"topicId": 1,
 			"questions": [
 				{
-					"title": "Cool title",
-					"subtitle": "Cool subtitle",
-					"type": "multiple",
+					"title": "Product promotion",
+					"subtitle": "Which tool would you recommend to e-shop which would like to promote thousands of products?",
+					"type": "simple",
 					"answers":[
 						{
 							"optionID": 0,
-							"option":"afsadfposkafop"
+							"option":"Ads Manager"
 						},
 						{
 							"optionID": 1,
-							"option":"afsadfposkafopfsdaf"
+							"option":"Power Editor"
 						},
 						{
 							"optionID": 2,
-							"option":"afsadfferfaposkafop"
+							"option":"Facebook Blueprint"
 						}
 					],
 					"correctAnswers": [
 						1
-					]
-				},
-				{
-					"title": "Cool title 12",
-					"subtitle": "Cool subtitle 12",
-					"type": "simple",
-					"answers":[
-						{
-							"optionID": 0,
-							"option":"afsadfposkafop"
-						},
-						{
-							"optionID": 1,
-							"option":"afsadfposkafopfsdaf"
-						},
-						{
-							"optionID": 2,
-							"option":"afsadfferfaposkafop"
-						}
-					],
-					"correctAnswers": [
-						2
-					]
-				}
-			]
-		},
-		{
-			"topicId": 2,
-			"questions": [
-				{
-					"title": "Cool title 2",
-					"subtitle": "Cool subtitle 2",
-					"type": "simple",
-					"answers":[
-						{
-							"optionID": 0,
-							"option":"afsadfposkafop"
-						},
-						{
-							"optionID": 1,
-							"option":"afsadfposkafopfsdaf"
-						},
-						{
-							"optionID": 2,
-							"option":"afsadfferfaposkafop"
-						}
-					],
-					"correctAnswers": [
-						2
 					]
 				}
 			]
