@@ -11,11 +11,13 @@ import UIKit
 class AnswerOptionTableViewCell: UITableViewCell {
     @IBOutlet weak var optionLabel: UILabel!
     @IBOutlet weak var optionValue: UILabel!
-    @IBOutlet weak var checkImage: BorderedLabelView!
+    @IBOutlet weak var checkImage: UIImageView!
 
     func setupStyles() {
-        optionLabel?.font = Fonts.TextFontLight
-        optionValue?.font = Fonts.TextFontLight
+        checkImage.image = checkImage.image?.withRenderingMode(.alwaysTemplate)
+        checkImage.tintColor = Colors.NotSelectedOptionColor
+        optionLabel.font = Fonts.TextFontLight
+        optionValue.font = Fonts.TextFontLight
     }
 
     func setupWith(answer: AnswerViewModel, answerPosition position: Int) {
@@ -26,14 +28,18 @@ class AnswerOptionTableViewCell: UITableViewCell {
 
     func setup(asCorrect correct: Bool) {
         if isSelected {
-            backgroundColor = correct ? Colors.CorrectOptionBackground : Colors.IncorrectOptionBackground
+            if correct {
+                checkImage.tintColor = Colors.CorrectOptionBackground
+            } else {
+                checkImage.image = UIImage(named: "error")
+            }
         } else if !isSelected && correct {
-            backgroundColor = Colors.CorrectOptionBackground
+            checkImage.tintColor = Colors.CorrectOptionBackground
         }
     }
 
     fileprivate func setCellSelected(_ selected: Bool) {
         isSelected = selected
-        checkImage.borderColor = selected ? Colors.SelectedOptionColor : Colors.NotSelectedOptionColor
+        checkImage.image = selected ? UIImage(named: "checked") : UIImage(named: "check")
     }
 }

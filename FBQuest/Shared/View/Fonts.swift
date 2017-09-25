@@ -11,6 +11,7 @@ import UIKit
 struct Fonts {
     static let H1Font = UIFont(name: "HelveticaNeue-UltraLight", size: 40)!
     static let H2Font = UIFont(name: "HelveticaNeue-UltraLight", size: 30)!
+    static let BackButton = UIFont(name: "HelveticaNeue-UltraLight", size: 18)!
     static let TextFont = UIFont(name: "HelveticaNeue", size: 18)!
     static let TextFontLight = UIFont(name: "HelveticaNeue-Light", size: 18)!
 }

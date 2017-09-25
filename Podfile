@@ -8,6 +8,8 @@ target 'FBQuest' do
   pod 'Google-Material-Design-Icons-Swift', '~> 1.0.1'
   pod 'SWGradientView'
   pod 'HexColors'
+  pod 'pop', '~> 1.0'
+  pod "SAConfettiView"
 
   use_frameworks!
  

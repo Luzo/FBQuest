@@ -11,6 +11,7 @@
 		8DFC19F1C94F6108D5D41435 /* Pods_FBQuestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A13FEE55792AE5ECC909EC83 /* Pods_FBQuestTests.framework */; };
 		E807361E1EC8CD23008C5AE1 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E807361D1EC8CD23008C5AE1 /* BasePresenter.swift */; };
 		E80736201EC8D4F4008C5AE1 /* ViewControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E807361F1EC8D4F4008C5AE1 /* ViewControllerAssembly.swift */; };
+		E807F5411F6C3FA600BBE066 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E807F5401F6C3FA600BBE066 /* UIImage+Extension.swift */; };
 		E85104B91EC8BB0500BB95A6 /* AppScopeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85104B81EC8BB0500BB95A6 /* AppScopeController.swift */; };
 		E85104BD1EC8BB3900BB95A6 /* ScopeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85104BC1EC8BB3900BB95A6 /* ScopeController.swift */; };
 		E85104BF1EC8C78C00BB95A6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85104BE1EC8C78C00BB95A6 /* MenuViewController.swift */; };
@@ -107,6 +108,7 @@
 		C648622CCA59DB5D625390E5 /* Pods_FBQuest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FBQuest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E807361D1EC8CD23008C5AE1 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		E807361F1EC8D4F4008C5AE1 /* ViewControllerAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerAssembly.swift; sourceTree = "<group>"; };
+		E807F5401F6C3FA600BBE066 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		E85104B81EC8BB0500BB95A6 /* AppScopeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppScopeController.swift; sourceTree = "<group>"; };
 		E85104BC1EC8BB3900BB95A6 /* ScopeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScopeController.swift; sourceTree = "<group>"; };
 		E85104BE1EC8C78C00BB95A6 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				E8F5FD271EDD303500FA81B2 /* String+Extension.swift */,
+				E807F5401F6C3FA600BBE066 /* UIImage+Extension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -970,6 +973,7 @@
 				E88BA65F1EDABC4C009629A9 /* TopicSlidesResource.swift in Sources */,
 				E8A6313E1ED47EA700D42862 /* BaseInteractor.swift in Sources */,
 				E8A631341ED4537F00D42862 /* MenuDatasource.swift in Sources */,
+				E807F5411F6C3FA600BBE066 /* UIImage+Extension.swift in Sources */,
 				E8D3C9ED1EE1A49600627C82 /* QuestionsConverter.swift in Sources */,
 				E85A2B651F1A963100B28F0D /* AnswerViewModel.swift in Sources */,
 				E8D3C9F31EE1D24B00627C82 /* DoneViewController.swift in Sources */,

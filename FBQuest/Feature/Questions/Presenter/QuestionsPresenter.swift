@@ -12,6 +12,8 @@ import UIKit
 protocol QuestionsView: View {
     func set(withQuestion question: Question)
     func set(withAnswers answers: [AnswerViewModel])
+    func setNextButtonVisible(_ visible: Bool)
+    func setCheckButtonVisible(_ visible: Bool)
     func showCorrectAnswers()
 }
 
@@ -36,15 +38,14 @@ final class QuestionsPresenterImpl: BasePresenter<QuestionsView> {
 
     var questionIndex: Int = 0
 
-    //temporary
-    var wasTapped: Bool = false
-
     deinit {
         print("dealloc \(self)")
     }
 
     override func setupAfterInit() {
         view?.navigationViewController?.isNavigationBarHidden = true
+        view?.setNextButtonVisible(false)
+        view?.setCheckButtonVisible(false)
 
         loadQuestion()
     }
@@ -94,7 +95,9 @@ extension QuestionsPresenterImpl: QuestionsPresenter {
         if questionIndex + 1 < questions.count {
             goToNextQuestion()
         } else {
+
             let doneViewController = appRouter.appScope.resolve(type: DoneViewController.self)
+            doneViewController.modalPresentationStyle = .overCurrentContext
             (view as? UIViewController)?.present(doneViewController, animated: true, completion: nil)
         }
     }
@@ -104,6 +107,8 @@ extension QuestionsPresenterImpl: QuestionsPresenter {
     }
 
     func selectedAnswer(atIndex index: Int) {
+        view?.setCheckButtonVisible(true)
+
         if questions[questionIndex].type ?? .simple == .simple {
             for index in 0 ..< answers.count { answers[index].isSelected = false }
         }
@@ -113,13 +118,8 @@ extension QuestionsPresenterImpl: QuestionsPresenter {
     }
 
     func checkButtonTapped() {
-        if wasTapped {
-            wasTapped = false
-            nextButtonTapped()
-            return
-        }
-
-        wasTapped = true
+        view?.setNextButtonVisible(true)
+        view?.setCheckButtonVisible(false)
         view?.showCorrectAnswers()
     }
 }

@@ -34,12 +34,30 @@ class BaseViewController<PresenterType>: UIViewController {
         UINavigationBar.appearance().backgroundColor = Colors.NavigationBar
         UINavigationBar.appearance().barTintColor = Colors.NavigationBar
         UINavigationBar.appearance().tintColor = .white
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).setTitleTextAttributes(
+            [
+                NSFontAttributeName : Fonts.TextFontLight,
+                NSForegroundColorAttributeName: UIColor.clear
+            ],
+            for: .normal
+        )
 
         UIApplication.shared.statusBarStyle = .lightContent
+
+        let backArrowImage = UIImage(named: "back")?.image(atSize: CGSize(width: 25, height: 25))
+        let renderedImage = backArrowImage?.withRenderingMode(.alwaysTemplate)
+        UINavigationBar.appearance().backIndicatorImage = renderedImage
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = renderedImage
     }
 
     override func viewWillAppear(_ animated: Bool) {
         _presenter.setupAfterInit()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+
+        self.navigationItem.title = " "
     }
 }
 

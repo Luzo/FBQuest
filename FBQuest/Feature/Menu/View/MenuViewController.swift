@@ -3,6 +3,7 @@
 //
 
 import UIKit
+import pop
 
 final class MenuViewController: BaseViewController<MenuPresenter> {
 
@@ -41,6 +42,23 @@ final class MenuViewController: BaseViewController<MenuPresenter> {
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return nil
+    }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let fadeAnimation = POPBasicAnimation(propertyNamed: kPOPViewAlpha)
+        fadeAnimation?.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+        fadeAnimation?.fromValue = 0
+        fadeAnimation?.duration = 1
+
+        cell.contentView.pop_add(fadeAnimation, forKey: "fadeIn")
+
+        let scaleAnimation = POPBasicAnimation(propertyNamed: kPOPViewScaleXY)
+        scaleAnimation?.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+
+        scaleAnimation?.fromValue = CGSize(width: 5, height: 5)
+        scaleAnimation?.duration = 1
+
+        cell.contentView.pop_add(scaleAnimation, forKey: "scaleXY")
     }
 }
 

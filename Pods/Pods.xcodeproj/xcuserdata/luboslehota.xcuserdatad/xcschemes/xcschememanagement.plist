@@ -34,12 +34,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SAConfettiView-SAConfettiView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SAConfettiView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SWGradientView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Swinject.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>pop.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -62,17 +77,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>45C565FD557C84DFBB7A05A58CB8C5CF</key>
+		<key>3C22782CBCE7BFBA131F5992A97F4D44</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>791BF599FFC591EF589435D248015CFF</key>
+		<key>55D6528C17097771D94D10A18C12E373</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B9770CAD89CEAA776D98E677F29CF43E</key>
+		<key>677197194DE4A23054E41587377D717F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7446180654BB000F618F1DEDA9F4E55B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,7 +102,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>D31ED2ABCEE65BC83946FDCDA9699602</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>EC4A3DB5F8479DCBEF1B76F7775AC589</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F133A1BB109B01BE6A975B2F6FB69059</key>
 		<dict>
 			<key>primary</key>
 			<true/>

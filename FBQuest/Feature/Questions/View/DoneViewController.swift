@@ -7,19 +7,23 @@
 //
 
 import UIKit
+import SAConfettiView
 
 final class DoneViewController: BaseViewController<DonePresenter> {
 
     @IBOutlet weak var contentHolder: UIView!
+    @IBOutlet var confettiView: SAConfettiView!
+    @IBOutlet weak var titleLabel: UILabel!
 
     deinit {
         print("dealloc \(self)")
     }
 
-    override func viewDidLoad() {
-        contentHolder.layer.shadowColor = UIColor.black.cgColor
-        contentHolder.layer.shadowOffset = CGSize(width: 2, height: 2)
-        contentHolder.layer.shadowOpacity = 0.8
+    override func setupViewLayout() {
+        super.setupViewLayout()
+        view.backgroundColor = Colors.ModalOverContext
+        titleLabel.font = Fonts.H1Font
+        confettiView.startConfetti()
     }
 
     @IBAction func didTapOnDoneButton(_ sender: UIButton) {
