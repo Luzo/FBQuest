@@ -75,7 +75,6 @@
 		E8EDB6FA1EE3E9FC003AEACF /* TopicSlides.json in Resources */ = {isa = PBXBuildFile; fileRef = E8E7F9D71ED5FF0500F2D9AE /* TopicSlides.json */; };
 		E8EDB6FB1EE3E9FC003AEACF /* Topics.json in Resources */ = {isa = PBXBuildFile; fileRef = E8E7F9D61ED5FF0500F2D9AE /* Topics.json */; };
 		E8F183A71F5B1555004837DF /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F183A61F5B1555004837DF /* Fonts.swift */; };
-		E8F183A91F5B20F0004837DF /* Flaticon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8F183A81F5B20BD004837DF /* Flaticon.ttf */; };
 		E8F5FD0A1EDC831200FA81B2 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5FD091EDC831200FA81B2 /* QuestionsViewController.swift */; };
 		E8F5FD0C1EDC831E00FA81B2 /* QuestionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5FD0B1EDC831E00FA81B2 /* QuestionsPresenter.swift */; };
 		E8F5FD0E1EDC832600FA81B2 /* QuestionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5FD0D1EDC832600FA81B2 /* QuestionsInteractor.swift */; };
@@ -807,7 +806,6 @@
 				E85A2B691F1AAB8F00B28F0D /* SimpleAnswerOptionTableViewCell.xib in Resources */,
 				E8A631311ED44CC600D42862 /* MenuItemTableCell.xib in Resources */,
 				E8A1CC571EC8B7FA00ED26E9 /* Main.storyboard in Resources */,
-				E8F183A91F5B20F0004837DF /* Flaticon.ttf in Resources */,
 				E8F5FD1F1EDC8CD700FA81B2 /* ReusableDescriptionTableViewCell.xib in Resources */,
 				E8F5FD1B1EDC8C1C00FA81B2 /* ReusableTitleTableViewCell.xib in Resources */,
 				E8D3C9DB1EE1603000627C82 /* GMDIcons.ttf in Resources */,
