@@ -68,6 +68,7 @@
 		E8D3C9FD1EE1DA4B00627C82 /* EventCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3C9FC1EE1DA4B00627C82 /* EventCenter.swift */; };
 		E8D3C9FF1EE1DA7900627C82 /* BaseNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3C9FE1EE1DA7900627C82 /* BaseNotificationCenter.swift */; };
 		E8D3CA011EE1DAA900627C82 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3CA001EE1DAA900627C82 /* Weak.swift */; };
+		E8DC59CE1F7FD68100B562DD /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DC59CD1F7FD68100B562DD /* UIView+Extension.swift */; };
 		E8E1647B1F24FEC600D8FC11 /* BorderedLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1647A1F24FEC600D8FC11 /* BorderedLabelView.swift */; };
 		E8E1647D1F25177700D8FC11 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1647C1F25177700D8FC11 /* Colors.swift */; };
 		E8E164801F25193C00D8FC11 /* ShadowedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1647F1F25193C00D8FC11 /* ShadowedView.swift */; };
@@ -168,6 +169,7 @@
 		E8D3C9FC1EE1DA4B00627C82 /* EventCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventCenter.swift; path = FBQuest/Shared/View/EventCenter.swift; sourceTree = SOURCE_ROOT; };
 		E8D3C9FE1EE1DA7900627C82 /* BaseNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseNotificationCenter.swift; path = FBQuest/Shared/View/BaseNotificationCenter.swift; sourceTree = SOURCE_ROOT; };
 		E8D3CA001EE1DAA900627C82 /* Weak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Weak.swift; path = FBQuest/Shared/View/Weak.swift; sourceTree = SOURCE_ROOT; };
+		E8DC59CD1F7FD68100B562DD /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		E8E1647A1F24FEC600D8FC11 /* BorderedLabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedLabelView.swift; sourceTree = "<group>"; };
 		E8E1647C1F25177700D8FC11 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		E8E1647F1F25193C00D8FC11 /* ShadowedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowedView.swift; sourceTree = "<group>"; };
@@ -360,6 +362,7 @@
 			children = (
 				E8F5FD271EDD303500FA81B2 /* String+Extension.swift */,
 				E807F5401F6C3FA600BBE066 /* UIImage+Extension.swift */,
+				E8DC59CD1F7FD68100B562DD /* UIView+Extension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -973,6 +976,7 @@
 				E8A631341ED4537F00D42862 /* MenuDatasource.swift in Sources */,
 				E807F5411F6C3FA600BBE066 /* UIImage+Extension.swift in Sources */,
 				E8D3C9ED1EE1A49600627C82 /* QuestionsConverter.swift in Sources */,
+				E8DC59CE1F7FD68100B562DD /* UIView+Extension.swift in Sources */,
 				E85A2B651F1A963100B28F0D /* AnswerViewModel.swift in Sources */,
 				E8D3C9F31EE1D24B00627C82 /* DoneViewController.swift in Sources */,
 				E8A631421ED4843700D42862 /* Result.swift in Sources */,

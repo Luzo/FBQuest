@@ -8,6 +8,7 @@
 
 
 import UIKit
+import pop
 
 final class SlidesViewController: BaseViewController<SlidesPresenter> {
 
@@ -20,6 +21,8 @@ final class SlidesViewController: BaseViewController<SlidesPresenter> {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var topicImageView: UIImageView!
     @IBOutlet weak var titleToDescriptionConstraint: NSLayoutConstraint!
+
+    fileprivate var canAnimateTransition: Bool = false
 
     deinit {
         print("dealloc \(self)")
@@ -35,6 +38,14 @@ final class SlidesViewController: BaseViewController<SlidesPresenter> {
         nextButton.setTitleColor(.clear, for: .selected)
         titleLabel.font = Fonts.H1Font
         descriptionLabel.font = Fonts.TextFont
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        canAnimateTransition = false
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        canAnimateTransition = true
     }
 
     func didTapNextButton() {
@@ -63,14 +74,67 @@ final class SlidesViewController: BaseViewController<SlidesPresenter> {
         activityViewController.popoverPresentationController?.sourceView = self.view
         present(activityViewController, animated: true, completion: nil)
     }
+
+    fileprivate func animateSlideOut() {
+        guard canAnimateTransition else { return }
+
+        let originalCenter = CGPoint(x: contentHolder.center.x, y: contentHolder.center.y)
+        let screenWidth = UIScreen.main.bounds.width
+
+        let copyView = contentHolder.imageCopy
+        let shadowedView = ShadowedView(frame: contentHolder.frame)
+        view.addSubview(shadowedView)
+        shadowedView.addSubview(copyView)
+
+        let slideOutAnimation = POPBasicAnimation(propertyNamed: kPOPViewCenter)
+        slideOutAnimation?.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+        slideOutAnimation?.toValue = CGPoint(x: -screenWidth, y: originalCenter.y)
+        slideOutAnimation?.duration = 1
+        slideOutAnimation?.completionBlock = { animation, completed in
+            shadowedView.removeFromSuperview()
+        }
+
+        shadowedView.pop_add(slideOutAnimation, forKey: "slideOut")
+    }
+
+    fileprivate func animateSlideIn() {
+        guard canAnimateTransition else { return }
+
+        let originalCenter = CGPoint(x: contentHolder.center.x, y: contentHolder.center.y)
+        let screenWidth = UIScreen.main.bounds.width
+
+        let copyView = contentHolder.imageCopy
+        let shadowedView = ShadowedView(frame: contentHolder.frame)
+        view.addSubview(shadowedView)
+        shadowedView.addSubview(copyView)
+
+        shadowedView.center.x = 2 * screenWidth
+        contentHolder.isHidden = true
+
+        let slideInAnimation = POPBasicAnimation(propertyNamed: kPOPViewCenter)
+        slideInAnimation?.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+        slideInAnimation?.toValue = originalCenter
+        slideInAnimation?.duration = 1
+        slideInAnimation?.completionBlock = { [unowned self] animation, completed in
+            shadowedView.removeFromSuperview()
+            self.contentHolder.isHidden = false
+        }
+
+        shadowedView.pop_add(slideInAnimation, forKey: "slideIn")
+    }
 }
 
 extension SlidesViewController: SlidesView {
+
     func setupView(withTopicSlide topicSlide: TopicSlide) {
+        animateSlideOut()
+
         titleLabel?.text = topicSlide.title
         descriptionLabel?.text = topicSlide.description
         topicImageView?.image = topicSlide.image.flatMap { UIImage(named: $0) }
         topicImageView?.isHidden = topicSlide.image == nil
         titleToDescriptionConstraint?.priority = topicSlide.image == nil ? 999 : 1
+
+        animateSlideIn()
     }
 }

@@ -33,6 +33,13 @@ class BaseViewController<PresenterType>: UIViewController {
         view.backgroundColor = Colors.Background
         UINavigationBar.appearance().backgroundColor = Colors.NavigationBar
         UINavigationBar.appearance().barTintColor = Colors.NavigationBar
+
+        setTitleView()
+        setNavigationBarElementsColors()
+        setBackButton()
+    }
+
+    fileprivate func setNavigationBarElementsColors() {
         UINavigationBar.appearance().tintColor = .white
         UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).setTitleTextAttributes(
             [
@@ -43,11 +50,26 @@ class BaseViewController<PresenterType>: UIViewController {
         )
 
         UIApplication.shared.statusBarStyle = .lightContent
+    }
 
+    fileprivate func setBackButton() {
         let backArrowImage = UIImage(named: "back")?.image(atSize: CGSize(width: 25, height: 25))
         let renderedImage = backArrowImage?.withRenderingMode(.alwaysTemplate)
         UINavigationBar.appearance().backIndicatorImage = renderedImage
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = renderedImage
+    }
+
+    fileprivate func setTitleView() {
+        //need to be in wrapper, otherwise title is not centered
+        let frame = CGRect(x: 0, y: 10, width: 200, height: 64)
+        let view = UIView(frame: frame)
+        let titleView = UIImageView(frame: frame)
+        titleView.contentMode = .scaleAspectFit
+        titleView.image = UIImage(named:"logo")
+//        titleView.autoresizingMask = .flexibleHeight
+
+        view.addSubview(titleView)
+        navigationItem.titleView = view
     }
 
     override func viewWillAppear(_ animated: Bool) {
