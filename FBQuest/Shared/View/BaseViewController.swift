@@ -69,6 +69,8 @@ class BaseViewController<PresenterType>: UIViewController {
 //        titleView.autoresizingMask = .flexibleHeight
 
         view.addSubview(titleView)
+        view.clipsToBounds = true
+        
         navigationItem.titleView = view
     }
 
